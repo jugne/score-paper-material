@@ -1,0 +1,447 @@
+<beast version="2.0"
+       namespace="beast.core
+                 :beast.core.util
+                 :beast.core.parameter
+                 :beast.evolution.alignment
+                 :beast.evolution.likelihood
+                 :beast.evolution.tree
+                 :beast.evolution.tree.coalescent
+                 :beast.evolution.sitemodel
+                 :beast.evolution.substitutionmodel
+                 :beast.evolution.operators
+                 :beast.math.distributions
+                 :feast.simulation
+                 :coalre.network
+                 :coalre.statistics
+                 :coalre.simulator
+                 :coalre.distribution
+                 :coalre.operators
+				 :structuredCoalescentNetwork.simulator">
+
+   <run spec="GPSimulator" nSims="1">
+        <simulationObject id="network_truth" spec="SimulateStructureCoalescentNetwork" nSegments="4" fileName="$(filebase).trueNetwork.tree">
+            
+			<coalescentRate spec="RealParameter" dimension="2" value="0.25955 0.28718"/>
+
+			<reassortmentRate spec="RealParameter" dimension="2" value="0.17368 0.18699"/>
+
+			<migrationRate spec="RealParameter" dimension="2" value="0.17112 0.12405"/>
+
+
+            <traitSet spec="TraitSet" traitname="date-backward" id="traitSet">
+            	<taxa spec="TaxonSet" id="taxonSet">
+				<taxon spec="Taxon" id="t1"/>
+				<taxon spec="Taxon" id="t2"/>
+				<taxon spec="Taxon" id="t3"/>
+				<taxon spec="Taxon" id="t4"/>
+				<taxon spec="Taxon" id="t5"/>
+				<taxon spec="Taxon" id="t6"/>
+				<taxon spec="Taxon" id="t7"/>
+				<taxon spec="Taxon" id="t8"/>
+				<taxon spec="Taxon" id="t9"/>
+				<taxon spec="Taxon" id="t10"/>
+				<taxon spec="Taxon" id="t11"/>
+				<taxon spec="Taxon" id="t12"/>
+				<taxon spec="Taxon" id="t13"/>
+				<taxon spec="Taxon" id="t14"/>
+				<taxon spec="Taxon" id="t15"/>
+				<taxon spec="Taxon" id="t16"/>
+				<taxon spec="Taxon" id="t17"/>
+				<taxon spec="Taxon" id="t18"/>
+				<taxon spec="Taxon" id="t19"/>
+				<taxon spec="Taxon" id="t20"/>
+				<taxon spec="Taxon" id="t21"/>
+				<taxon spec="Taxon" id="t22"/>
+				<taxon spec="Taxon" id="t23"/>
+				<taxon spec="Taxon" id="t24"/>
+				<taxon spec="Taxon" id="t25"/>
+				<taxon spec="Taxon" id="t26"/>
+				<taxon spec="Taxon" id="t27"/>
+				<taxon spec="Taxon" id="t28"/>
+				<taxon spec="Taxon" id="t29"/>
+				<taxon spec="Taxon" id="t30"/>
+				<taxon spec="Taxon" id="t31"/>
+				<taxon spec="Taxon" id="t32"/>
+				<taxon spec="Taxon" id="t33"/>
+				<taxon spec="Taxon" id="t34"/>
+				<taxon spec="Taxon" id="t35"/>
+				<taxon spec="Taxon" id="t36"/>
+				<taxon spec="Taxon" id="t37"/>
+				<taxon spec="Taxon" id="t38"/>
+				<taxon spec="Taxon" id="t39"/>
+				<taxon spec="Taxon" id="t40"/>
+				<taxon spec="Taxon" id="t41"/>
+				<taxon spec="Taxon" id="t42"/>
+				<taxon spec="Taxon" id="t43"/>
+				<taxon spec="Taxon" id="t44"/>
+				<taxon spec="Taxon" id="t45"/>
+				<taxon spec="Taxon" id="t46"/>
+				<taxon spec="Taxon" id="t47"/>
+				<taxon spec="Taxon" id="t48"/>
+				<taxon spec="Taxon" id="t49"/>
+				<taxon spec="Taxon" id="t50"/>
+				<taxon spec="Taxon" id="t51"/>
+				<taxon spec="Taxon" id="t52"/>
+				<taxon spec="Taxon" id="t53"/>
+				<taxon spec="Taxon" id="t54"/>
+				<taxon spec="Taxon" id="t55"/>
+				<taxon spec="Taxon" id="t56"/>
+				<taxon spec="Taxon" id="t57"/>
+				<taxon spec="Taxon" id="t58"/>
+				<taxon spec="Taxon" id="t59"/>
+				<taxon spec="Taxon" id="t60"/>
+				<taxon spec="Taxon" id="t61"/>
+				<taxon spec="Taxon" id="t62"/>
+				<taxon spec="Taxon" id="t63"/>
+				<taxon spec="Taxon" id="t64"/>
+				<taxon spec="Taxon" id="t65"/>
+				<taxon spec="Taxon" id="t66"/>
+				<taxon spec="Taxon" id="t67"/>
+				<taxon spec="Taxon" id="t68"/>
+				<taxon spec="Taxon" id="t69"/>
+				<taxon spec="Taxon" id="t70"/>
+				<taxon spec="Taxon" id="t71"/>
+				<taxon spec="Taxon" id="t72"/>
+				<taxon spec="Taxon" id="t73"/>
+				<taxon spec="Taxon" id="t74"/>
+				<taxon spec="Taxon" id="t75"/>
+				<taxon spec="Taxon" id="t76"/>
+				<taxon spec="Taxon" id="t77"/>
+				<taxon spec="Taxon" id="t78"/>
+				<taxon spec="Taxon" id="t79"/>
+				<taxon spec="Taxon" id="t80"/>
+				<taxon spec="Taxon" id="t81"/>
+				<taxon spec="Taxon" id="t82"/>
+				<taxon spec="Taxon" id="t83"/>
+				<taxon spec="Taxon" id="t84"/>
+				<taxon spec="Taxon" id="t85"/>
+				<taxon spec="Taxon" id="t86"/>
+				<taxon spec="Taxon" id="t87"/>
+				<taxon spec="Taxon" id="t88"/>
+				<taxon spec="Taxon" id="t89"/>
+				<taxon spec="Taxon" id="t90"/>
+				<taxon spec="Taxon" id="t91"/>
+				<taxon spec="Taxon" id="t92"/>
+				<taxon spec="Taxon" id="t93"/>
+				<taxon spec="Taxon" id="t94"/>
+				<taxon spec="Taxon" id="t95"/>
+				<taxon spec="Taxon" id="t96"/>
+				<taxon spec="Taxon" id="t97"/>
+				<taxon spec="Taxon" id="t98"/>
+				<taxon spec="Taxon" id="t99"/>
+				<taxon spec="Taxon" id="t100"/>
+            	</taxa>
+				t1=18.745041,
+				t2=9.791299,
+				t3=10.792982,
+				t4=17.905207,
+				t5=8.932701,
+				t6=17.540688,
+				t7=5.071635,
+				t8=5.476194,
+				t9=6.567228,
+				t10=10.951285,
+				t11=4.402573,
+				t12=13.428583,
+				t13=2.855866,
+				t14=1.882005,
+				t15=17.403835,
+				t16=4.737374,
+				t17=7.720080,
+				t18=11.430842,
+				t19=10.516039,
+				t20=1.520478,
+				t21=17.482519,
+				t22=19.022712,
+				t23=16.250146,
+				t24=5.676037,
+				t25=10.556936,
+				t26=6.788334,
+				t27=11.093346,
+				t28=19.488069,
+				t29=6.234058,
+				t30=13.375932,
+				t31=6.519344,
+				t32=15.489545,
+				t33=6.516199,
+				t34=17.796547,
+				t35=15.034154,
+				t36=15.252642,
+				t37=9.389581,
+				t38=4.215290,
+				t39=0.829502,
+				t40=6.436576,
+				t41=0.742253,
+				t42=13.877108,
+				t43=13.407001,
+				t44=8.609436,
+				t45=15.355780,
+				t46=10.720170,
+				t47=0.797199,
+				t48=2.695862,
+				t49=3.868328,
+				t50=6.713276,
+				t51=1.046259,
+				t52=12.102336,
+				t53=10.241221,
+				t54=12.349220,
+				t55=8.647112,
+				t56=16.954009,
+				t57=9.081181,
+				t58=0.308070,
+				t59=17.461363,
+				t60=13.124031,
+				t61=16.460061,
+				t62=19.035514,
+				t63=1.018248,
+				t64=4.701437,
+				t65=1.266869,
+				t66=8.433158,
+				t67=17.276583,
+				t68=1.632480,
+				t69=9.462239,
+				t70=2.510862,
+				t71=15.457712,
+				t72=16.828443,
+				t73=0.865819,
+				t74=9.728815,
+				t75=4.788221,
+				t76=19.049476,
+				t77=18.877853,
+				t78=12.278680,
+				t79=19.469748,
+				t80=6.897227,
+				t81=17.957014,
+				t82=8.691899,
+				t83=4.716293,
+				t84=18.816559,
+				t85=13.684361,
+				t86=1.298232,
+				t87=17.408497,
+				t88=14.027606,
+				t89=12.098537,
+				t90=14.647498,
+				t91=5.068781,
+				t92=12.009779,
+				t93=16.292384,
+				t94=1.082273,
+				t95=2.610213,
+				t96=16.848916,
+				t97=12.366917,
+				t98=10.625756,
+				t99=4.965815,
+				t100=5.901572
+            </traitSet>
+
+	<typeTrait spec="TraitSet" traitname="type" id="typeTrait">
+				t1=1,
+				t2=0,
+				t3=0,
+				t4=1,
+				t5=0,
+				t6=1,
+				t7=1,
+				t8=0,
+				t9=1,
+				t10=1,
+				t11=1,
+				t12=1,
+				t13=0,
+				t14=1,
+				t15=1,
+				t16=0,
+				t17=0,
+				t18=1,
+				t19=0,
+				t20=0,
+				t21=0,
+				t22=1,
+				t23=1,
+				t24=1,
+				t25=0,
+				t26=1,
+				t27=1,
+				t28=1,
+				t29=0,
+				t30=1,
+				t31=1,
+				t32=1,
+				t33=0,
+				t34=1,
+				t35=0,
+				t36=0,
+				t37=1,
+				t38=1,
+				t39=1,
+				t40=1,
+				t41=1,
+				t42=1,
+				t43=0,
+				t44=0,
+				t45=1,
+				t46=0,
+				t47=0,
+				t48=1,
+				t49=0,
+				t50=0,
+				t51=1,
+				t52=0,
+				t53=0,
+				t54=0,
+				t55=1,
+				t56=1,
+				t57=0,
+				t58=1,
+				t59=1,
+				t60=0,
+				t61=1,
+				t62=0,
+				t63=0,
+				t64=0,
+				t65=0,
+				t66=1,
+				t67=1,
+				t68=0,
+				t69=1,
+				t70=1,
+				t71=1,
+				t72=1,
+				t73=0,
+				t74=0,
+				t75=0,
+				t76=1,
+				t77=0,
+				t78=1,
+				t79=1,
+				t80=1,
+				t81=1,
+				t82=0,
+				t83=1,
+				t84=1,
+				t85=1,
+				t86=0,
+				t87=0,
+				t88=0,
+				t89=0,
+				t90=1,
+				t91=1,
+				t92=1,
+				t93=0,
+				t94=0,
+				t95=0,
+				t96=0,
+				t97=0,
+				t98=1,
+				t99=1,
+				t100=1
+		<taxa idref="taxonSet"/>
+	</typeTrait>
+
+
+            <segmentTree id="seg1tree_truth" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+            <segmentTree id="seg2tree_truth" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+            <segmentTree id="seg3tree_truth" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+            <segmentTree id="seg4tree_truth" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+        </simulationObject>
+
+
+
+		<simulationObject id="seg1align.high" spec="SimulatedAlignment" outputFileName="$(filebase).seg1.alignment.high.nexus"
+                   sequenceLength="1000" tree="@seg1tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+        <simulationObject id="seg2align.high" spec="SimulatedAlignment" outputFileName="$(filebase).seg2.alignment.high.nexus"
+                   sequenceLength="1000" tree="@seg2tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+        <simulationObject id="seg3align.high" spec="SimulatedAlignment" outputFileName="$(filebase).seg3.alignment.high.nexus"
+                   sequenceLength="1000" tree="@seg3tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+        <simulationObject id="seg4align.high" spec="SimulatedAlignment" outputFileName="$(filebase).seg4.alignment.high.nexus"
+                   sequenceLength="1000" tree="@seg4tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+
+        <simulationObject id="seg1align.low" spec="SimulatedAlignment" outputFileName="$(filebase).seg1.alignment.low.nexus"
+                   sequenceLength="1000" tree="@seg1tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.0005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+        <simulationObject id="seg2align.low" spec="SimulatedAlignment" outputFileName="$(filebase).seg2.alignment.low.nexus"
+                   sequenceLength="1000" tree="@seg2tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.0005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+        <simulationObject id="seg3align.low" spec="SimulatedAlignment" outputFileName="$(filebase).seg3.alignment.low.nexus"
+                   sequenceLength="1000" tree="@seg3tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.0005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+        <simulationObject id="seg4align.low" spec="SimulatedAlignment" outputFileName="$(filebase).seg4.alignment.low.nexus"
+                   sequenceLength="1000" tree="@seg4tree_truth">
+            <siteModel spec="SiteModel">
+                <mutationRate spec="RealParameter" value="0.0005"/>
+                <substModel spec="JukesCantor"/>
+            </siteModel>
+        </simulationObject>
+
+
+        <logger spec="Logger" fileName="$(filebase).trueSeg1.tree" logEvery="1">
+            <log idref="seg1tree_truth"/>
+        </logger>
+
+        <logger spec="Logger" fileName="$(filebase).trueSeg2.tree" logEvery="1">
+            <log idref="seg2tree_truth"/>
+        </logger>
+        <logger spec="Logger" fileName="$(filebase).trueSeg3.tree" logEvery="1">
+            <log idref="seg3tree_truth"/>
+        </logger>
+        <logger spec="Logger" fileName="$(filebase).trueSeg4.tree" logEvery="1">
+            <log idref="seg4tree_truth"/>
+        </logger>
+
+        <logger spec="Logger" logEvery="1" fileName="$(filebase).log">
+            <log spec="NetworkStatsLogger" network="@network_truth"/>
+        </logger>
+
+        <logger spec="Logger" logEvery="1">
+            <log spec="NetworkStatsLogger" network="@network_truth"/>
+        </logger>
+
+
+    </run>
+
+</beast>
+
+
+
+
+
+
+

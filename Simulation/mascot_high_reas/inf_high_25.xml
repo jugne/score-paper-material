@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Mascot' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.core.util
+                 :beast.core.parameter
+                 :beast.evolution.alignment
+                 :beast.evolution.likelihood
+                 :beast.evolution.tree
+                 :beast.evolution.tree.coalescent
+                 :beast.evolution.sitemodel
+                 :beast.evolution.substitutionmodel
+                 :beast.evolution.operators
+                 :beast.math.distributions
+                 :feast.simulation
+                 :feast.fileio
+                 :coalre.network
+                 :coalre.statistics
+                 :coalre.simulator
+                 :coalre.distribution
+                 :coalre.operators
+		 		 :structuredCoalescentNetwork.distribution
+		 		 :structuredCoalescentNetwork.simulator
+		  		 :structuredCoalescentNetwork.math
+				 :structuredCoalescentNetwork.dynamics
+				 :structuredCoalescentNetwork.logger
+				 :structuredCoalescentNetwork.operators:beast.evolution.tree.coalescent:beast.evolution.tree:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" required="BEAST v2.5.0" version="2.5">
+
+	<alignment id="seg1align" spec="AlignmentFromNexus" fileName="../sim_compare_high_reas/sim_25.seg1.alignment.high.nexus"/>
+	<alignment id="seg2align" spec="AlignmentFromNexus" fileName="../sim_compare_high_reas/sim_25.seg2.alignment.high.nexus"/>
+    	<alignment id="seg3align" spec="AlignmentFromNexus" fileName="../sim_compare_high_reas/sim_25.seg3.alignment.high.nexus"/>
+   	 <alignment id="seg4align" spec="AlignmentFromNexus" fileName="../sim_compare_high_reas/sim_25.seg4.alignment.high.nexus"/>
+
+    <traitSet spec="TraitSet" traitname="date-backward" id="traitSet">
+	            	<taxa spec="TaxonSet" id="taxonSet">
+				<taxon spec="Taxon" id="t1"/>
+				<taxon spec="Taxon" id="t2"/>
+				<taxon spec="Taxon" id="t3"/>
+				<taxon spec="Taxon" id="t4"/>
+				<taxon spec="Taxon" id="t5"/>
+				<taxon spec="Taxon" id="t6"/>
+				<taxon spec="Taxon" id="t7"/>
+				<taxon spec="Taxon" id="t8"/>
+				<taxon spec="Taxon" id="t9"/>
+				<taxon spec="Taxon" id="t10"/>
+				<taxon spec="Taxon" id="t11"/>
+				<taxon spec="Taxon" id="t12"/>
+				<taxon spec="Taxon" id="t13"/>
+				<taxon spec="Taxon" id="t14"/>
+				<taxon spec="Taxon" id="t15"/>
+				<taxon spec="Taxon" id="t16"/>
+				<taxon spec="Taxon" id="t17"/>
+				<taxon spec="Taxon" id="t18"/>
+				<taxon spec="Taxon" id="t19"/>
+				<taxon spec="Taxon" id="t20"/>
+				<taxon spec="Taxon" id="t21"/>
+				<taxon spec="Taxon" id="t22"/>
+				<taxon spec="Taxon" id="t23"/>
+				<taxon spec="Taxon" id="t24"/>
+				<taxon spec="Taxon" id="t25"/>
+				<taxon spec="Taxon" id="t26"/>
+				<taxon spec="Taxon" id="t27"/>
+				<taxon spec="Taxon" id="t28"/>
+				<taxon spec="Taxon" id="t29"/>
+				<taxon spec="Taxon" id="t30"/>
+				<taxon spec="Taxon" id="t31"/>
+				<taxon spec="Taxon" id="t32"/>
+				<taxon spec="Taxon" id="t33"/>
+				<taxon spec="Taxon" id="t34"/>
+				<taxon spec="Taxon" id="t35"/>
+				<taxon spec="Taxon" id="t36"/>
+				<taxon spec="Taxon" id="t37"/>
+				<taxon spec="Taxon" id="t38"/>
+				<taxon spec="Taxon" id="t39"/>
+				<taxon spec="Taxon" id="t40"/>
+				<taxon spec="Taxon" id="t41"/>
+				<taxon spec="Taxon" id="t42"/>
+				<taxon spec="Taxon" id="t43"/>
+				<taxon spec="Taxon" id="t44"/>
+				<taxon spec="Taxon" id="t45"/>
+				<taxon spec="Taxon" id="t46"/>
+				<taxon spec="Taxon" id="t47"/>
+				<taxon spec="Taxon" id="t48"/>
+				<taxon spec="Taxon" id="t49"/>
+				<taxon spec="Taxon" id="t50"/>
+				<taxon spec="Taxon" id="t51"/>
+				<taxon spec="Taxon" id="t52"/>
+				<taxon spec="Taxon" id="t53"/>
+				<taxon spec="Taxon" id="t54"/>
+				<taxon spec="Taxon" id="t55"/>
+				<taxon spec="Taxon" id="t56"/>
+				<taxon spec="Taxon" id="t57"/>
+				<taxon spec="Taxon" id="t58"/>
+				<taxon spec="Taxon" id="t59"/>
+				<taxon spec="Taxon" id="t60"/>
+				<taxon spec="Taxon" id="t61"/>
+				<taxon spec="Taxon" id="t62"/>
+				<taxon spec="Taxon" id="t63"/>
+				<taxon spec="Taxon" id="t64"/>
+				<taxon spec="Taxon" id="t65"/>
+				<taxon spec="Taxon" id="t66"/>
+				<taxon spec="Taxon" id="t67"/>
+				<taxon spec="Taxon" id="t68"/>
+				<taxon spec="Taxon" id="t69"/>
+				<taxon spec="Taxon" id="t70"/>
+				<taxon spec="Taxon" id="t71"/>
+				<taxon spec="Taxon" id="t72"/>
+				<taxon spec="Taxon" id="t73"/>
+				<taxon spec="Taxon" id="t74"/>
+				<taxon spec="Taxon" id="t75"/>
+				<taxon spec="Taxon" id="t76"/>
+				<taxon spec="Taxon" id="t77"/>
+				<taxon spec="Taxon" id="t78"/>
+				<taxon spec="Taxon" id="t79"/>
+				<taxon spec="Taxon" id="t80"/>
+				<taxon spec="Taxon" id="t81"/>
+				<taxon spec="Taxon" id="t82"/>
+				<taxon spec="Taxon" id="t83"/>
+				<taxon spec="Taxon" id="t84"/>
+				<taxon spec="Taxon" id="t85"/>
+				<taxon spec="Taxon" id="t86"/>
+				<taxon spec="Taxon" id="t87"/>
+				<taxon spec="Taxon" id="t88"/>
+				<taxon spec="Taxon" id="t89"/>
+				<taxon spec="Taxon" id="t90"/>
+				<taxon spec="Taxon" id="t91"/>
+				<taxon spec="Taxon" id="t92"/>
+				<taxon spec="Taxon" id="t93"/>
+				<taxon spec="Taxon" id="t94"/>
+				<taxon spec="Taxon" id="t95"/>
+				<taxon spec="Taxon" id="t96"/>
+				<taxon spec="Taxon" id="t97"/>
+				<taxon spec="Taxon" id="t98"/>
+				<taxon spec="Taxon" id="t99"/>
+				<taxon spec="Taxon" id="t100"/>
+            	</taxa>
+				t1=0.925256,
+				t2=15.328980,
+				t3=16.136931,
+				t4=0.320994,
+				t5=7.826559,
+				t6=17.311541,
+				t7=19.169493,
+				t8=18.391839,
+				t9=10.939759,
+				t10=6.198425,
+				t11=11.785300,
+				t12=11.919810,
+				t13=13.291037,
+				t14=11.816300,
+				t15=17.361109,
+				t16=7.479557,
+				t17=4.880331,
+				t18=0.409731,
+				t19=4.653772,
+				t20=3.232033,
+				t21=4.763208,
+				t22=17.619263,
+				t23=14.631989,
+				t24=4.867782,
+				t25=15.861085,
+				t26=10.882417,
+				t27=8.129725,
+				t28=4.116045,
+				t29=6.214638,
+				t30=1.584930,
+				t31=4.672470,
+				t32=13.315028,
+				t33=7.020403,
+				t34=16.394404,
+				t35=13.223098,
+				t36=12.487022,
+				t37=8.405557,
+				t38=12.900046,
+				t39=17.496613,
+				t40=6.225453,
+				t41=6.855041,
+				t42=16.973583,
+				t43=10.597882,
+				t44=18.473762,
+				t45=3.751059,
+				t46=4.297465,
+				t47=17.249175,
+				t48=1.989808,
+				t49=9.433248,
+				t50=16.788071,
+				t51=13.874732,
+				t52=9.244830,
+				t53=3.303970,
+				t54=11.016318,
+				t55=19.759573,
+				t56=16.103151,
+				t57=1.098577,
+				t58=14.218568,
+				t59=19.532325,
+				t60=3.867478,
+				t61=19.128154,
+				t62=4.666911,
+				t63=16.387956,
+				t64=2.988374,
+				t65=10.282095,
+				t66=7.280294,
+				t67=13.413751,
+				t68=3.582342,
+				t69=11.594967,
+				t70=0.048474,
+				t71=8.513085,
+				t72=10.315864,
+				t73=16.755932,
+				t74=15.152753,
+				t75=1.837833,
+				t76=12.500673,
+				t77=13.200058,
+				t78=14.680575,
+				t79=11.097201,
+				t80=2.147110,
+				t81=12.806956,
+				t82=13.410617,
+				t83=5.002140,
+				t84=18.965505,
+				t85=9.052982,
+				t86=17.334313,
+				t87=13.061622,
+				t88=12.330702,
+				t89=10.988018,
+				t90=12.951349,
+				t91=16.886705,
+				t92=15.537576,
+				t93=13.452549,
+				t94=0.636907,
+				t95=0.173895,
+				t96=7.170753,
+				t97=0.612676,
+				t98=10.356949,
+				t99=0.071078,
+				t100=9.614608
+    </traitSet>
+
+	<typeTrait spec="TraitSet" traitname="type" id="typeTrait">
+				t1=0,
+				t2=1,
+				t3=0,
+				t4=0,
+				t5=1,
+				t6=1,
+				t7=1,
+				t8=0,
+				t9=1,
+				t10=1,
+				t11=0,
+				t12=1,
+				t13=1,
+				t14=0,
+				t15=1,
+				t16=0,
+				t17=0,
+				t18=1,
+				t19=0,
+				t20=1,
+				t21=0,
+				t22=1,
+				t23=1,
+				t24=0,
+				t25=0,
+				t26=0,
+				t27=0,
+				t28=1,
+				t29=1,
+				t30=1,
+				t31=0,
+				t32=0,
+				t33=1,
+				t34=1,
+				t35=1,
+				t36=0,
+				t37=1,
+				t38=0,
+				t39=0,
+				t40=1,
+				t41=0,
+				t42=1,
+				t43=0,
+				t44=0,
+				t45=0,
+				t46=1,
+				t47=0,
+				t48=0,
+				t49=1,
+				t50=0,
+				t51=1,
+				t52=1,
+				t53=0,
+				t54=1,
+				t55=1,
+				t56=0,
+				t57=1,
+				t58=1,
+				t59=0,
+				t60=0,
+				t61=1,
+				t62=0,
+				t63=1,
+				t64=1,
+				t65=0,
+				t66=0,
+				t67=0,
+				t68=1,
+				t69=1,
+				t70=0,
+				t71=0,
+				t72=1,
+				t73=1,
+				t74=0,
+				t75=0,
+				t76=1,
+				t77=1,
+				t78=1,
+				t79=1,
+				t80=0,
+				t81=1,
+				t82=0,
+				t83=1,
+				t84=1,
+				t85=1,
+				t86=1,
+				t87=0,
+				t88=0,
+				t89=1,
+				t90=1,
+				t91=0,
+				t92=1,
+				t93=0,
+				t94=0,
+				t95=1,
+				t96=1,
+				t97=0,
+				t98=1,
+				t99=0,
+				t100=1
+		<taxa idref="taxonSet"/>
+	</typeTrait>
+
+	<run spec="MCMC" chainLength="200000000" storeEvery="10000">
+
+		<state>
+			<stateNode id="seg1.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+			<stateNode id="seg2.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+			<stateNode id="seg3.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+			<stateNode id="seg4.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+			
+        			<stateNode id="popSize" spec="RealParameter" value="0.37378 3.9413"/>
+        			<stateNode id="migrationRate" spec="RealParameter" dimension="2" value="0.78686 1.518"/>
+        			<stateNode id="clockRate.high" spec="RealParameter" value="0.005"/>
+        			<stateNode id="clockRate.low" spec="RealParameter" value="0.0005"/>
+		</state>
+	
+    		<init id="RandomTree1" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@seg1.tree" taxa="@seg1align">
+        				<populationModel id="ConstantPopulation1" spec="ConstantPopulation">
+            			<parameter id="randomPopSize1" name="popSize">0.37378 3.9413</parameter>
+        				</populationModel>
+    		</init>
+		<init id="RandomTree2" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@seg2.tree" taxa="@seg2align">
+        				<populationModel id="ConstantPopulation2" spec="ConstantPopulation">
+            			<parameter id="randomPopSize2" name="popSize">0.37378 3.9413</parameter>
+        				</populationModel>
+    		</init>
+		<init id="RandomTree3" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@seg3.tree" taxa="@seg3align">
+        				<populationModel id="ConstantPopulation3" spec="ConstantPopulation">
+            			<parameter id="randomPopSize3" name="popSize">0.37378 3.9413</parameter>
+        				</populationModel>
+    		</init>
+		<init id="RandomTree4" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@seg4.tree" taxa="@seg4align">
+        				<populationModel id="ConstantPopulation4" spec="ConstantPopulation">
+            			<parameter id="randomPopSize4" name="popSize">0.37378 3.9413</parameter>
+        				</populationModel>
+    		</init>
+		
+
+	<distribution id="posterior" spec="CompoundDistribution">
+        		<distribution id="likelihood" spec="CompoundDistribution">
+            		<distribution spec="TreeLikelihood">
+                    		<data idref="seg1align"/>
+                    		<tree idref="seg1.tree"/>
+                    		<siteModel spec="SiteModel" mutationRate="@clockRate.high">
+                        			<substModel spec="JukesCantor"/>
+                    		</siteModel>
+        			</distribution>
+			 <distribution spec="TreeLikelihood">
+                    		<data idref="seg2align"/>
+                    		<tree idref="seg2.tree"/>
+                    		<siteModel spec="SiteModel" mutationRate="@clockRate.high">
+                        			<substModel spec="JukesCantor"/>
+                    		</siteModel>
+        			</distribution>
+			<distribution spec="TreeLikelihood">
+                    		<data idref="seg3align"/>
+                    		<tree idref="seg3.tree"/>
+                    		<siteModel spec="SiteModel" mutationRate="@clockRate.high">
+                        			<substModel spec="JukesCantor"/>
+                    		</siteModel>
+        			</distribution>
+			<distribution spec="TreeLikelihood">
+                    		<data idref="seg4align"/>
+                    		<tree idref="seg4.tree"/>
+                    		<siteModel spec="SiteModel" mutationRate="@clockRate.high">
+                        			<substModel spec="JukesCantor"/>
+                    		</siteModel>
+        			</distribution>
+		</distribution>
+
+		<distribution id="prior" spec="util.CompoundDistribution">
+			<distribution id="structuredCoalescent.t1" spec="beast.mascot.distribution.Mascot" tree="@seg1.tree">
+                			<dynamics id="constant.t1" spec="beast.mascot.dynamics.Constant" Ne="@popSize" backwardsMigration="@migrationRate" dimension="0" typeTrait="@typeTrait"/>
+	                		<structuredTreeIntervals id="TreeIntervals.t1" spec="beast.mascot.distribution.StructuredTreeIntervals" tree="@seg1.tree"/>
+	        		</distribution>
+			<distribution id="structuredCoalescent.t2" spec="beast.mascot.distribution.Mascot" tree="@seg2.tree">
+                			<dynamics id="constant.t2" spec="beast.mascot.dynamics.Constant" Ne="@popSize" backwardsMigration="@migrationRate" dimension="0" typeTrait="@typeTrait"/>
+	                		<structuredTreeIntervals id="TreeIntervals.t2" spec="beast.mascot.distribution.StructuredTreeIntervals" tree="@seg2.tree"/>
+	        		</distribution>
+			<distribution id="structuredCoalescent.t3" spec="beast.mascot.distribution.Mascot" tree="@seg3.tree">
+                			<dynamics id="constant.t3" spec="beast.mascot.dynamics.Constant" Ne="@popSize" backwardsMigration="@migrationRate" dimension="0" typeTrait="@typeTrait"/>
+	                		<structuredTreeIntervals id="TreeIntervals.t3" spec="beast.mascot.distribution.StructuredTreeIntervals" tree="@seg3.tree"/>
+	        		</distribution>
+			<distribution id="structuredCoalescent.t4" spec="beast.mascot.distribution.Mascot" tree="@seg4.tree">
+                			<dynamics id="constant.t4" spec="beast.mascot.dynamics.Constant" Ne="@popSize" backwardsMigration="@migrationRate" dimension="0" typeTrait="@typeTrait"/>
+	                		<structuredTreeIntervals id="TreeIntervals.t4" spec="beast.mascot.distribution.StructuredTreeIntervals" tree="@seg4.tree"/>
+	        		</distribution>
+
+			<distribution id="parametersPrior" spec="CompoundDistribution">
+                    		<distribution spec="beast.math.distributions.Prior" x="@migrationRate">
+                        			<distr spec="beast.math.distributions.LogNormalDistributionModel" M="-1.7344" S="0.5"/>
+                			</distribution>
+
+                			<distribution spec="beast.math.distributions.Prior" x="@popSize">
+                        			<distr spec="beast.math.distributions.LogNormalDistributionModel" M="0.5681" S="0.5"/>
+                    		</distribution>
+            		</distribution> 
+ 		</distribution>
+	</distribution>
+
+		<operator id="MigratioOperator" spec="ScaleOperator"
+                  weight="5.0" scaleFactor="0.8"  optimise="false"  parameter="@migrationRate">
+        </operator>
+
+        <operator id="PopSizeScaler" spec="ScaleOperator"
+                  weight="5.0"  scaleFactor="0.8" optimise="false" parameter="@popSize">
+        </operator>
+
+
+	<operator id="TreeScaler.t1" spec="ScaleOperator" tree="@seg1.tree" weight="3.0"/>
+    	<operator id="RootScaler.t1" spec="ScaleOperator" tree="@seg1.tree" weight="1.0"/>
+    	<operator id="Uniform.t1" spec="Uniform" tree="@seg1.tree" weight="30.0"/>
+   	<operator id="SubtreeSlide.t1" spec="SubtreeSlide" tree="@seg1.tree" weight="15.0"/>
+    	<operator id="Narrow.t1" spec="Exchange" tree="@seg1.tree" weight="15.0"/>
+    	<operator id="WilsonBalding.t1" spec="WilsonBalding" tree="@seg1.tree" weight="3.0"/>
+	
+	<operator id="TreeScaler.t2" spec="ScaleOperator" tree="@seg2.tree" weight="3.0"/>
+    	<operator id="RootScaler.t2" spec="ScaleOperator" tree="@seg2.tree" weight="1.0"/>
+    	<operator id="Uniform.t2" spec="Uniform" tree="@seg2.tree" weight="30.0"/>
+   	<operator id="SubtreeSlide.t2" spec="SubtreeSlide" tree="@seg2.tree" weight="15.0"/>
+    	<operator id="Narrow.t2" spec="Exchange" tree="@seg2.tree" weight="15.0"/>
+    	<operator id="WilsonBalding.t2" spec="WilsonBalding" tree="@seg2.tree" weight="3.0"/>
+	
+	<operator id="TreeScaler.t3" spec="ScaleOperator" tree="@seg3.tree" weight="3.0"/>
+    	<operator id="RootScaler.t3" spec="ScaleOperator" tree="@seg3.tree" weight="1.0"/>
+    	<operator id="Uniform.t3" spec="Uniform" tree="@seg3.tree" weight="30.0"/>
+   	<operator id="SubtreeSlide.t3" spec="SubtreeSlide" tree="@seg3.tree" weight="15.0"/>
+    	<operator id="Narrow.t3" spec="Exchange" tree="@seg3.tree" weight="15.0"/>
+    	<operator id="WilsonBalding.t3" spec="WilsonBalding" tree="@seg3.tree" weight="3.0"/>
+	
+	<operator id="TreeScaler.t4" spec="ScaleOperator" tree="@seg4.tree" weight="3.0"/>
+    	<operator id="RootScaler.t4" spec="ScaleOperator" tree="@seg4.tree" weight="1.0"/>
+    	<operator id="Uniform.t4" spec="Uniform" tree="@seg4.tree" weight="30.0"/>
+   	<operator id="SubtreeSlide.t4" spec="SubtreeSlide" tree="@seg4.tree" weight="15.0"/>
+    	<operator id="Narrow.t4" spec="Exchange" tree="@seg4.tree" weight="15.0"/>
+    	<operator id="WilsonBalding.t4" spec="WilsonBalding" tree="@seg4.tree" weight="3.0"/>
+
+
+
+	<logger logEvery="10000" fileName="$(filebase).log">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="structuredCoalescent.t1"/>
+        <log idref="structuredCoalescent.t2"/>
+        <log idref="structuredCoalescent.t3"/>
+        <log idref="structuredCoalescent.t4"/>
+        <log idref="constant.t1"/>
+	<log spec="TreeStatLogger" tree="@seg1.tree"/>
+	<log spec="TreeStatLogger" tree="@seg2.tree"/>
+	<log spec="TreeStatLogger" tree="@seg3.tree"/>
+	<log spec="TreeStatLogger" tree="@seg4.tree"/>
+	</logger>
+
+	<logger id="screenlog" logEvery="100000">
+		<log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log spec="ESS" arg="@posterior"/>
+	</logger>
+
+    <logger id="treelog1" fileName="$(filebase).seg1.trees" logEvery="1000000" mode="tree">
+        <log id="structuredTreelog.t1" spec="beast.mascot.logger.StructuredTreeLogger" mascot="@structuredCoalescent.t1"/>
+    </logger>
+    <logger id="treelog2" fileName="$(filebase).seg2.trees" logEvery="1000000" mode="tree">
+        <log id="structuredTreelog.t2" spec="beast.mascot.logger.StructuredTreeLogger" mascot="@structuredCoalescent.t2"/>
+    </logger>
+    <logger id="treelog3" fileName="$(filebase).seg3.trees" logEvery="1000000" mode="tree">
+        <log id="structuredTreelog.t3" spec="beast.mascot.logger.StructuredTreeLogger" mascot="@structuredCoalescent.t3"/>
+    </logger>
+    <logger id="treelog4" fileName="$(filebase).seg4.trees" logEvery="1000000" mode="tree">
+        <log id="structuredTreelog.t4" spec="beast.mascot.logger.StructuredTreeLogger" mascot="@structuredCoalescent.t4"/>
+    </logger>
+
+    </run>
+</beast>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,234 @@
+<beast version="2.0"
+       namespace="beast.core
+                 :beast.core.util
+                 :beast.core.parameter
+                 :beast.evolution.alignment
+                 :beast.evolution.likelihood
+                 :beast.evolution.tree
+                 :beast.evolution.tree.coalescent
+                 :beast.evolution.sitemodel
+                 :beast.evolution.substitutionmodel
+                 :beast.evolution.operators
+                 :beast.math.distributions
+                 :feast.simulation
+                 :feast.fileio
+                 :coalre.network
+                 :coalre.statistics
+                 :coalre.simulator
+                 :coalre.distribution
+                 :coalre.operators
+		 		 :score.distribution
+		 		 :score.simulator
+		  		 :score.math
+				 :score.operators
+				 :score.dynamics
+				 :score.mapping
+				 :score.logger">
+
+    insert_alignment
+
+
+    <map name="Uniform" >beast.math.distributions.Uniform</map>
+    <map name="Exponential" >beast.math.distributions.Exponential</map>
+    <map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
+    <map name="Normal" >beast.math.distributions.Normal</map>
+    <map name="Beta" >beast.math.distributions.Beta</map>
+    <map name="Gamma" >beast.math.distributions.Gamma</map>
+    <map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
+    <map name="prior" >beast.math.distributions.Prior</map>
+    <map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
+    <map name="OneOnX" >beast.math.distributions.OneOnX</map>
+
+
+    <trait spec="TraitSet" traitname="date-forward" id="traitSet">
+		<taxa spec="TaxonSet" id="taxonSet">
+        		insert_taxa
+        </taxa>
+      	
+		insert_sampling_times
+    </trait>
+
+	<typeTrait spec="TraitSet" traitname="type" id="typeTrait">
+		insert_types
+		<taxa idref="taxonSet"/>
+	</typeTrait>
+
+    insert_run_header
+
+        <init spec="SegmentTreeInitializer" network="@network">
+          insert_seg_tree
+        </init>
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="likelihood" spec="CompoundDistribution">
+              insert_tree_likelihood
+            </distribution>
+
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="networkPrior" spec="SCORE">
+                    <networkIntervals spec="StructuredNetworkIntervals" id="StructuredNetworkIntervals" network="@network"/>
+					<dynamics id="constantReassort" spec="ConstantReassortment" dimension="2">
+						<structuredCoalescentDynamics id="structuredCoalescentDynamics" spec="beast.mascot.dynamics.Constant" dimension="2" fromBeauti="false">
+							<Ne idref="popSize.t"/>
+							<backwardsMigration idref="migrationRate"/>
+        					<typeTrait idref="typeTrait"/>
+						</structuredCoalescentDynamics>
+						<typeTrait idref="typeTrait"/>
+						<reassortmentRates spec="RealParameter" idref="reassortmentRate"/>
+					</dynamics>
+                </distribution>
+                <prior id="ClockPrior.c" name="distribution" x="@clockRate.c">
+                  <OneOnX id="Uniform.0" name="distr"/>
+                </prior>
+
+                insert_priors
+
+                <prior id="PopSizePrior" name="distribution" x="@popSize.t">
+                  <LogNormal id="LogNormalDistributionModel.PopSize" meanInRealSpace="true" name="distr" M="2" S="0.5"/>
+                </prior>
+
+                <prior id="ReassortmentRatePrior" name="distribution" x="@reassortmentRate">
+                  <LogNormal id="LogNormalDistributionModel.reassortmentRate" meanInRealSpace="true" name="distr" M="0.1" S="1"/>
+                </prior>
+
+               	<prior id="MigrationRatePrior" name="distribution" x="@migrationRate">
+               		<Exponential id="ExponentialDistribution.migrationRate" name="distr" mean="0.2" />
+                	</prior>
+
+
+            </distribution>
+        </distribution>
+        
+                <state>
+          insert_seg_tree_state
+
+		<stateNode id="network" spec="SimulateStructureCoalescentNetwork" nSegments="insert_nr_segments" ignoreMigrationNodes="true" enableSegmentTreeUpdate="false">
+
+                <traitSet idref="traitSet"/>
+		<typeTrait idref="typeTrait"/>
+
+				<parameter id="coalescentRate.init" name="coalescentRate">0.5</parameter>
+				<parameter id="reassortmentRate.init" name="reassortmentRate">0.1</parameter>
+                <parameter id="migrationRate.init" name="migrationRate">0.2</parameter>
+
+            </stateNode>
+            <stateNode spec="MappedNetwork" id="mappedNet" untypedNetwork="@network" dynamics="@constantReassort" rejection="true"/>
+
+			<parameter id="reassortmentRate" name="stateNode" dimension="2">0.1</parameter>
+            <parameter id="migrationRate" name="stateNode" dimension="2">0.2</parameter>
+            <parameter id="clockRate.c" name="stateNode">0.0036</parameter>
+            <parameter id="popSize.t" name="stateNode">2</parameter>
+            insert_parameters
+        </state>
+
+        <operator id="ReassortmentRateScaler" spec="ScaleOperator" parameter="@reassortmentRate" scaleFactor="0.5" weight="3"/>
+	<operator id="MigrationRateScaler" spec="ScaleOperator" parameter="@migrationRate" scaleFactor="0.5"  weight="3"/>
+        <operator id="NeScaler" spec="ScaleOperator" parameter="@popSize.t" scaleFactor="0.5" weight="3"/>
+
+        insert_operators
+
+
+        <operator id="FixMeanMutationRatesOperator" spec="DeltaExchangeOperator" delta="0.75" weight="3.0">
+          insert_mut_par
+          <weightvector id="weightparameter" spec="parameter.IntegerParameter" dimension="4" estimate="false">
+            insert_weights
+          </weightvector>
+        </operator>
+
+        <operator id="upDownOperator" spec="NetworkScaleOperator" network="@network" weight="5.0">
+            insert_seg_tree
+            <upParameter idref="popSize.t"/>
+            <downParameter idref="clockRate.c"/>
+            <downParameter idref="reassortmentRate"/>
+        </operator>
+
+        <operator id="upDownOperatorNeMigration" spec="NetworkScaleOperator" network="@network" weight="5.0">
+            insert_seg_tree
+            <upParameter idref="popSize.t"/>
+            <downParameter idref="migrationRate"/>
+        </operator>
+
+        <operator id="clockRatescaler" spec="ScaleOperator" parameter="@clockRate.c" scaleFactor="0.75" weight="3"/>
+
+        <operator id="AddRemoveReassortment" spec="AddRemoveReassortment" network="@network" alpha="1.0" weight="100.0">
+          insert_seg_tree
+        </operator>
+
+      	<operator id="DivertSegmentOperator" spec="DivertSegmentOperator" network="@network" weight="5.0">
+          insert_seg_tree
+        </operator>
+
+      	<operator spec="UniformNetworkNodeHeightOperator" network="@network" weight="5.0">
+          insert_seg_tree
+        </operator>
+
+        <operator id="NetworkScale" spec="NetworkScaleOperator" network="@network" weight="3.0">
+          insert_seg_tree
+        </operator>
+
+        <operator id="NetworkScaleRootOnly" spec="NetworkScaleOperator" network="@network" scaleRootOnly="true" weight="3.0">
+          insert_seg_tree
+        </operator>
+
+      	<operator id="NetworkExchangeWide" spec="NetworkExchange" network="@network" isNarrow="false" weight="10.0">
+          insert_seg_tree
+        </operator>
+
+      	<operator id="NetworkExchangeNarrow" spec="NetworkExchange" network="@network" isNarrow="true" weight="10.0">
+          insert_seg_tree
+        </operator>
+
+      	<operator id="SubNetworkSlide" spec="SubNetworkSlide" network="@network" weight="30.0">
+          insert_seg_tree
+        </operator>
+
+        <operator id="ResimulateAboveSegmentRoots" spec="ResimulateAboveSegmentRoots" network="@network" weight="3.0">
+			insert_seg_tree
+          	<Ne idref="popSize.t"/>
+       		<reassortmentRates idref="reassortmentRate"/>
+	  		<networkIntervals idref="StructuredNetworkIntervals"/>
+        </operator>
+
+        <logger spec="Logger" logEvery="50000" mode="tree" fileName="$(filebase).typed.network.trees">
+            <log idref="mappedNet"/>
+        </logger>
+        
+        <logger spec="Logger" logEvery="50000" fileName="$(filebase).typed.stats.log">
+            <log spec="TypedNetworkStatsLogger" network="@mappedNet">
+            </log>
+        </logger> 
+
+        <logger logEvery="50000" mode="tree" fileName="$(filebase).network.trees">
+            <log idref="network"/>
+        </logger>
+
+        insert_seg_logger
+        
+
+
+
+        <logger logEvery="50000" fileName="$(filebase).log">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="networkPrior"/>
+            <log idref="constantReassort"/>
+            <log idref="structuredCoalescentDynamics"/>
+			<log spec="RootStateLogger" score="@networkPrior" reassortmentDynamics="@constantReassort"/>
+            <log spec="NetworkStatsLogger" network="@network">
+              insert_seg_tree
+            </log>
+            insert_stats_log
+            <log idref="clockRate.c"/>
+            insert_param_log
+        </logger>
+
+        <logger id="screenlog" logEvery="5000000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+            <log spec="NetworkStatsLogger" network="@network"/>
+            <log spec="ESS" arg="@posterior"/>
+        </logger>
+
+    </run>
+</beast>

@@ -1,0 +1,140 @@
+<beast version="2.0"
+       namespace="beast.core
+                 :beast.core.util
+                 :beast.core.parameter
+                 :beast.evolution.alignment
+                 :beast.evolution.likelihood
+                 :beast.evolution.tree
+                 :beast.evolution.tree.coalescent
+                 :beast.evolution.sitemodel
+                 :beast.evolution.substitutionmodel
+                 :beast.evolution.operators
+                 :beast.math.distributions
+                 :feast.simulation
+                 :feast.fileio
+                 :coalre.operators">
+
+    insert_alignment
+
+
+    <map name="Uniform" >beast.math.distributions.Uniform</map>
+    <map name="Exponential" >beast.math.distributions.Exponential</map>
+    <map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
+    <map name="Normal" >beast.math.distributions.Normal</map>
+    <map name="Beta" >beast.math.distributions.Beta</map>
+    <map name="Gamma" >beast.math.distributions.Gamma</map>
+    <map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
+    <map name="prior" >beast.math.distributions.Prior</map>
+    <map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
+    <map name="OneOnX" >beast.math.distributions.OneOnX</map>
+
+
+    <traitSet spec="TraitSet" traitname="date-forward" id="traitSet">
+	<taxa spec="TaxonSet" id="taxonSet">
+        		insert_taxa
+        </taxa>
+		insert_sampling_times
+    </traitSet>
+
+<typeTrait spec="TraitSet" traitname="type" id="typeTrait">
+	insert_types
+	<taxa idref="taxonSet"/>
+</typeTrait>
+
+    insert_run_header
+
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="likelihood" spec="CompoundDistribution">
+              insert_tree_likelihood
+            </distribution>
+
+            <distribution id="prior" spec="CompoundDistribution">
+            	insert_mascot_prior
+                
+                 <prior id="ClockPrior.c" name="distribution" x="@clockRate.c">
+                		<OneOnX id="Uniform.0" name="distr"/>
+                </prior>
+
+                insert_priors
+
+                <prior id="PopSizePrior" name="distribution" x="@popSize.t">
+                  <LogNormal id="LogNormalDistributionModel.PopSize" meanInRealSpace="true" name="distr" M="2" S="0.5"/>
+                </prior>
+
+               	<prior id="MigrationRatePrior" name="distribution" x="@migrationRate">
+               		<Exponential id="ExponentialDistribution.migrationRate" name="distr" mean="0.2" />
+                	</prior>
+
+
+            </distribution>
+        </distribution>
+        
+         <state>
+          insert_seg_tree_state
+
+            <parameter id="migrationRate" name="stateNode" dimension="2">0.2</parameter>
+            <parameter id="clockRate.c" name="stateNode">0.0036</parameter>
+            <parameter id="popSize.t" name="stateNode">2.0</parameter>
+            insert_parameters
+        </state>
+        
+        tree_init
+
+	<operator id="MigrationRateScaler" spec="ScaleOperator" parameter="@migrationRate" scaleFactor="0.5"  weight="3"/>
+        <operator id="NeScaler" spec="ScaleOperator" parameter="@popSize.t" scaleFactor="0.5" weight="3"/>
+
+        insert_operators
+
+
+        <operator id="FixMeanMutationRatesOperator" spec="DeltaExchangeOperator" delta="0.75" weight="3.0">
+          insert_mut_par
+          <weightvector id="weightparameter" spec="parameter.IntegerParameter" dimension="4" estimate="false">
+            insert_weights
+          </weightvector>
+        </operator>
+
+        <operator id="upDownOperator" spec="UpDownOperator" scaleFactor="0.75" weight="3.0">
+            insert_seg_tree
+            <up idref="popSize.t"/>
+            <down idref="clockRate.c"/>
+        </operator>
+
+
+        <operator id="clockRatescaler" spec="ScaleOperator" parameter="@clockRate.c" scaleFactor="0.75" weight="3"/>
+
+       
+
+        insert_seg_logger
+        
+
+        <logger id="treelog.t:ha" fileName="$(filebase).ha.str.trees" logEvery="50000" mode="tree">
+        		<log id="structuredTreelog.t:ha" spec="beast.mascot.logger.StructuredTreeLogger" mascot="@structuredCoalescent.t:ha"/>
+    	</logger>
+	
+	 <logger id="treelog.t:na" fileName="$(filebase).na.str.trees" logEvery="50000" mode="tree">
+        		<log id="structuredTreelog.t:na" spec="beast.mascot.logger.StructuredTreeLogger" mascot="@structuredCoalescent.t:na"/>
+    	</logger>
+
+        <logger logEvery="50000" fileName="$(filebase).log">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+	   <log idref="structuredCoalescent.t:ha"/>
+	   <log idref="structuredCoalescent.t:na"/>
+	   <log idref="constant.t:ha"/>
+            insert_stats_log
+            <log idref="clockRate.c"/>
+            insert_param_log
+        </logger>
+
+        <logger id="screenlog" logEvery="5000000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+            <log spec="ESS" arg="@posterior"/>
+        </logger>
+        
+
+
+    </run>
+</beast>

@@ -1,0 +1,1363 @@
+<beast version="2.0"
+       namespace="beast.core
+                 :beast.core.util
+                 :beast.core.parameter
+                 :beast.evolution.alignment
+                 :beast.evolution.likelihood
+                 :beast.evolution.tree
+                 :beast.evolution.tree.coalescent
+                 :beast.evolution.sitemodel
+                 :beast.evolution.substitutionmodel
+                 :beast.evolution.operators
+                 :beast.math.distributions
+                 :feast.simulation
+                 :feast.fileio
+                 :coalre.network
+                 :coalre.statistics
+                 :coalre.simulator
+                 :coalre.distribution
+                 :coalre.operators
+		 		 :score.distribution
+		 		 :score.simulator
+		  		 :score.math
+				 :score.operators
+				 :score.dynamics
+				 :score.mapping
+				 :score.logger">
+
+	<data id="ha">
+		<sequence id="ha.A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14" taxon="A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14" totalcount="4" value=""/>
+		<sequence id="ha.A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01" taxon="A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01" totalcount="4" value=""/>
+		<sequence id="ha.A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21" taxon="A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21" totalcount="4" value=""/>
+		<sequence id="ha.A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01" taxon="A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01" totalcount="4" value=""/>
+		<sequence id="ha.A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07" taxon="A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07" totalcount="4" value=""/>
+		<sequence id="ha.A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15" taxon="A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01" taxon="A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27" taxon="A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20" taxon="A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01" taxon="A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12" taxon="A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05" taxon="A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18" taxon="A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21" taxon="A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29" taxon="A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22" taxon="A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27" taxon="A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25" taxon="A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15" taxon="A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10" taxon="A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18" taxon="A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17" taxon="A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23" taxon="A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13" taxon="A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/China/E93/2012|china|Galliformes|2012-07-10" taxon="A/chicken/China/E93/2012|china|Galliformes|2012-07-10" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04" taxon="A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04" taxon="A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20" taxon="A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02" taxon="A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11" taxon="A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26" taxon="A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15" taxon="A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20" taxon="A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24" taxon="A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08" taxon="A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25" taxon="A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09" taxon="A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06" taxon="A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29" taxon="A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08" taxon="A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03" taxon="A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22" taxon="A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01" taxon="A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30" taxon="A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06" taxon="A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17" taxon="A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15" taxon="A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30" taxon="A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06" taxon="A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23" taxon="A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03" taxon="A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01" taxon="A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17" taxon="A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18" taxon="A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10" taxon="A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12" taxon="A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25" taxon="A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05" taxon="A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06" taxon="A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21" taxon="A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03" taxon="A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22" taxon="A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11" taxon="A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28" taxon="A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21" taxon="A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27" taxon="A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11" taxon="A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16" taxon="A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24" taxon="A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30" taxon="A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09" taxon="A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04" taxon="A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02" taxon="A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15" taxon="A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10" taxon="A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01" taxon="A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06" taxon="A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14" taxon="A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29" taxon="A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15" taxon="A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07" taxon="A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07" taxon="A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21" taxon="A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17" taxon="A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25" taxon="A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01" taxon="A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28" taxon="A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04" taxon="A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13" taxon="A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14" taxon="A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17" taxon="A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11" taxon="A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20" taxon="A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29" taxon="A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25" taxon="A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25" totalcount="4" value=""/>
+		<sequence id="ha.A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04" taxon="A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24" taxon="A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20" taxon="A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28" taxon="A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27" taxon="A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19" taxon="A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20" taxon="A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22" taxon="A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17" taxon="A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16" taxon="A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29" taxon="A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22" taxon="A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10" taxon="A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12" taxon="A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23" taxon="A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29" taxon="A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28" taxon="A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21" taxon="A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27" taxon="A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25" taxon="A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20" taxon="A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06" taxon="A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02" taxon="A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01" taxon="A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12" taxon="A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30" taxon="A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12" taxon="A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30" taxon="A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/China/E53/2012|china|Anseriformes|2012-05-19" taxon="A/duck/China/E53/2012|china|Anseriformes|2012-05-19" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13" taxon="A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10" taxon="A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15" taxon="A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20" taxon="A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26" taxon="A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12" taxon="A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08" taxon="A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11" taxon="A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13" taxon="A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02" taxon="A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17" taxon="A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19" taxon="A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28" taxon="A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19" taxon="A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07" taxon="A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01" taxon="A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27" taxon="A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11" taxon="A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14" taxon="A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06" taxon="A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21" taxon="A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21" taxon="A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07" taxon="A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26" taxon="A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09" taxon="A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01" taxon="A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07" taxon="A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14" taxon="A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06" taxon="A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30" taxon="A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07" taxon="A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14" taxon="A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11" taxon="A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27" taxon="A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15" taxon="A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15" taxon="A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07" taxon="A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20" taxon="A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31" taxon="A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13" taxon="A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14" taxon="A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04" taxon="A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29" taxon="A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01" taxon="A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03" taxon="A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10" taxon="A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10" taxon="A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23" taxon="A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06" taxon="A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26" taxon="A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04" taxon="A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18" taxon="A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11" taxon="A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03" taxon="A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26" taxon="A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18" taxon="A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02" taxon="A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09" taxon="A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26" taxon="A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26" totalcount="4" value=""/>
+		<sequence id="ha.A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20" taxon="A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20" totalcount="4" value=""/>
+		<sequence id="ha.A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20" taxon="A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20" totalcount="4" value=""/>
+		<sequence id="ha.A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20" taxon="A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20" totalcount="4" value=""/>
+		<sequence id="ha.A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10" taxon="A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10" totalcount="4" value=""/>
+		<sequence id="ha.A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01" taxon="A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01" totalcount="4" value=""/>
+		<sequence id="ha.A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01" taxon="A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01" totalcount="4" value=""/>
+		<sequence id="ha.A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27" taxon="A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27" totalcount="4" value=""/>
+		<sequence id="ha.A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07" taxon="A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07" totalcount="4" value=""/>
+		<sequence id="ha.A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02" taxon="A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02" totalcount="4" value=""/>
+		<sequence id="ha.A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08" taxon="A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08" totalcount="4" value=""/>
+		<sequence id="ha.A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01" taxon="A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01" totalcount="4" value=""/>
+		<sequence id="ha.A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20" taxon="A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20" totalcount="4" value=""/>
+		<sequence id="ha.A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17" taxon="A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17" totalcount="4" value=""/>
+		<sequence id="ha.A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07" taxon="A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07" totalcount="4" value=""/>
+		<sequence id="ha.A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29" taxon="A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29" totalcount="4" value=""/>
+		<sequence id="ha.A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02" taxon="A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02" totalcount="4" value=""/>
+		<sequence id="ha.A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17" taxon="A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17" totalcount="4" value=""/>
+	</data>
+	<data id="na">
+		<sequence id="na.A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14" taxon="A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14" totalcount="4" value=""/>
+		<sequence id="na.A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01" taxon="A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01" totalcount="4" value=""/>
+		<sequence id="na.A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21" taxon="A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21" totalcount="4" value=""/>
+		<sequence id="na.A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01" taxon="A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01" totalcount="4" value=""/>
+		<sequence id="na.A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07" taxon="A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07" totalcount="4" value=""/>
+		<sequence id="na.A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15" taxon="A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01" taxon="A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27" taxon="A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20" taxon="A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01" taxon="A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12" taxon="A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05" taxon="A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18" taxon="A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21" taxon="A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29" taxon="A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22" taxon="A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27" taxon="A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25" taxon="A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15" taxon="A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10" taxon="A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18" taxon="A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17" taxon="A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23" taxon="A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13" taxon="A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/China/E93/2012|china|Galliformes|2012-07-10" taxon="A/chicken/China/E93/2012|china|Galliformes|2012-07-10" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04" taxon="A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04" taxon="A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20" taxon="A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02" taxon="A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11" taxon="A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26" taxon="A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15" taxon="A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20" taxon="A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24" taxon="A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08" taxon="A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25" taxon="A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09" taxon="A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06" taxon="A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29" taxon="A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08" taxon="A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03" taxon="A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22" taxon="A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01" taxon="A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30" taxon="A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06" taxon="A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17" taxon="A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15" taxon="A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30" taxon="A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06" taxon="A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23" taxon="A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03" taxon="A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01" taxon="A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17" taxon="A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18" taxon="A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10" taxon="A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12" taxon="A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25" taxon="A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05" taxon="A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06" taxon="A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21" taxon="A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03" taxon="A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22" taxon="A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11" taxon="A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28" taxon="A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21" taxon="A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27" taxon="A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11" taxon="A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16" taxon="A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24" taxon="A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30" taxon="A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09" taxon="A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04" taxon="A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02" taxon="A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15" taxon="A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10" taxon="A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01" taxon="A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06" taxon="A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14" taxon="A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29" taxon="A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15" taxon="A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07" taxon="A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07" taxon="A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21" taxon="A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17" taxon="A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25" taxon="A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01" taxon="A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28" taxon="A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04" taxon="A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13" taxon="A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14" taxon="A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17" taxon="A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11" taxon="A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20" taxon="A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29" taxon="A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25" taxon="A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25" totalcount="4" value=""/>
+		<sequence id="na.A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04" taxon="A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24" taxon="A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20" taxon="A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28" taxon="A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27" taxon="A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19" taxon="A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20" taxon="A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22" taxon="A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17" taxon="A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16" taxon="A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29" taxon="A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22" taxon="A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10" taxon="A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12" taxon="A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23" taxon="A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29" taxon="A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28" taxon="A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21" taxon="A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27" taxon="A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25" taxon="A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20" taxon="A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20" totalcount="4" value=""/>
+		<sequence id="na.A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06" taxon="A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02" taxon="A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01" taxon="A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12" taxon="A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30" taxon="A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12" taxon="A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30" taxon="A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30" totalcount="4" value=""/>
+		<sequence id="na.A/duck/China/E53/2012|china|Anseriformes|2012-05-19" taxon="A/duck/China/E53/2012|china|Anseriformes|2012-05-19" totalcount="4" value=""/>
+		<sequence id="na.A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13" taxon="A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10" taxon="A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10" totalcount="4" value=""/>
+		<sequence id="na.A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15" taxon="A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20" taxon="A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26" taxon="A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12" taxon="A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08" taxon="A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11" taxon="A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13" taxon="A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02" taxon="A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17" taxon="A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19" taxon="A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28" taxon="A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19" taxon="A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07" taxon="A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07" totalcount="4" value=""/>
+		<sequence id="na.A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01" taxon="A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27" taxon="A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11" taxon="A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14" taxon="A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06" taxon="A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21" taxon="A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21" taxon="A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07" taxon="A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26" taxon="A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09" taxon="A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09" totalcount="4" value=""/>
+		<sequence id="na.A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01" taxon="A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07" taxon="A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14" taxon="A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06" taxon="A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30" taxon="A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07" taxon="A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14" taxon="A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11" taxon="A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27" taxon="A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15" taxon="A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15" taxon="A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07" taxon="A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20" taxon="A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31" taxon="A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13" taxon="A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14" taxon="A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04" taxon="A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29" taxon="A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01" taxon="A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03" taxon="A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10" taxon="A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10" taxon="A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23" taxon="A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06" taxon="A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26" taxon="A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04" taxon="A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18" taxon="A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11" taxon="A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03" taxon="A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26" taxon="A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18" taxon="A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02" taxon="A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09" taxon="A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26" taxon="A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26" totalcount="4" value=""/>
+		<sequence id="na.A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20" taxon="A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20" totalcount="4" value=""/>
+		<sequence id="na.A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20" taxon="A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20" totalcount="4" value=""/>
+		<sequence id="na.A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20" taxon="A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20" totalcount="4" value=""/>
+		<sequence id="na.A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10" taxon="A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10" totalcount="4" value=""/>
+		<sequence id="na.A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01" taxon="A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01" totalcount="4" value=""/>
+		<sequence id="na.A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01" taxon="A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01" totalcount="4" value=""/>
+		<sequence id="na.A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27" taxon="A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27" totalcount="4" value=""/>
+		<sequence id="na.A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07" taxon="A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07" totalcount="4" value=""/>
+		<sequence id="na.A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02" taxon="A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02" totalcount="4" value=""/>
+		<sequence id="na.A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08" taxon="A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08" totalcount="4" value=""/>
+		<sequence id="na.A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01" taxon="A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01" totalcount="4" value=""/>
+		<sequence id="na.A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20" taxon="A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20" totalcount="4" value=""/>
+		<sequence id="na.A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17" taxon="A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17" totalcount="4" value=""/>
+		<sequence id="na.A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07" taxon="A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07" totalcount="4" value=""/>
+		<sequence id="na.A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29" taxon="A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29" totalcount="4" value=""/>
+		<sequence id="na.A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02" taxon="A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02" totalcount="4" value=""/>
+		<sequence id="na.A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17" taxon="A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17" totalcount="4" value=""/>
+	</data>
+
+
+    <map name="Uniform" >beast.math.distributions.Uniform</map>
+    <map name="Exponential" >beast.math.distributions.Exponential</map>
+    <map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
+    <map name="Normal" >beast.math.distributions.Normal</map>
+    <map name="Beta" >beast.math.distributions.Beta</map>
+    <map name="Gamma" >beast.math.distributions.Gamma</map>
+    <map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
+    <map name="prior" >beast.math.distributions.Prior</map>
+    <map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
+    <map name="OneOnX" >beast.math.distributions.OneOnX</map>
+
+
+    <trait spec="TraitSet" traitname="date-forward" id="traitSet">
+		<taxa spec="TaxonSet" id="taxonSet">
+			<taxon spec="Taxon" id="A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14"/>
+			<taxon spec="Taxon" id="A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01"/>
+			<taxon spec="Taxon" id="A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21"/>
+			<taxon spec="Taxon" id="A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01"/>
+			<taxon spec="Taxon" id="A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07"/>
+			<taxon spec="Taxon" id="A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15"/>
+			<taxon spec="Taxon" id="A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01"/>
+			<taxon spec="Taxon" id="A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27"/>
+			<taxon spec="Taxon" id="A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20"/>
+			<taxon spec="Taxon" id="A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15"/>
+			<taxon spec="Taxon" id="A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10"/>
+			<taxon spec="Taxon" id="A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18"/>
+			<taxon spec="Taxon" id="A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17"/>
+			<taxon spec="Taxon" id="A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23"/>
+			<taxon spec="Taxon" id="A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13"/>
+			<taxon spec="Taxon" id="A/chicken/China/E93/2012|china|Galliformes|2012-07-10"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29"/>
+			<taxon spec="Taxon" id="A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08"/>
+			<taxon spec="Taxon" id="A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03"/>
+			<taxon spec="Taxon" id="A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22"/>
+			<taxon spec="Taxon" id="A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01"/>
+			<taxon spec="Taxon" id="A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30"/>
+			<taxon spec="Taxon" id="A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06"/>
+			<taxon spec="Taxon" id="A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17"/>
+			<taxon spec="Taxon" id="A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15"/>
+			<taxon spec="Taxon" id="A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30"/>
+			<taxon spec="Taxon" id="A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06"/>
+			<taxon spec="Taxon" id="A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23"/>
+			<taxon spec="Taxon" id="A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03"/>
+			<taxon spec="Taxon" id="A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01"/>
+			<taxon spec="Taxon" id="A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17"/>
+			<taxon spec="Taxon" id="A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18"/>
+			<taxon spec="Taxon" id="A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10"/>
+			<taxon spec="Taxon" id="A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12"/>
+			<taxon spec="Taxon" id="A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25"/>
+			<taxon spec="Taxon" id="A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05"/>
+			<taxon spec="Taxon" id="A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06"/>
+			<taxon spec="Taxon" id="A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21"/>
+			<taxon spec="Taxon" id="A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03"/>
+			<taxon spec="Taxon" id="A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22"/>
+			<taxon spec="Taxon" id="A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11"/>
+			<taxon spec="Taxon" id="A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28"/>
+			<taxon spec="Taxon" id="A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21"/>
+			<taxon spec="Taxon" id="A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27"/>
+			<taxon spec="Taxon" id="A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11"/>
+			<taxon spec="Taxon" id="A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16"/>
+			<taxon spec="Taxon" id="A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24"/>
+			<taxon spec="Taxon" id="A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30"/>
+			<taxon spec="Taxon" id="A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09"/>
+			<taxon spec="Taxon" id="A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04"/>
+			<taxon spec="Taxon" id="A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02"/>
+			<taxon spec="Taxon" id="A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15"/>
+			<taxon spec="Taxon" id="A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10"/>
+			<taxon spec="Taxon" id="A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01"/>
+			<taxon spec="Taxon" id="A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06"/>
+			<taxon spec="Taxon" id="A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11"/>
+			<taxon spec="Taxon" id="A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20"/>
+			<taxon spec="Taxon" id="A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29"/>
+			<taxon spec="Taxon" id="A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25"/>
+			<taxon spec="Taxon" id="A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25"/>
+			<taxon spec="Taxon" id="A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20"/>
+			<taxon spec="Taxon" id="A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06"/>
+			<taxon spec="Taxon" id="A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02"/>
+			<taxon spec="Taxon" id="A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01"/>
+			<taxon spec="Taxon" id="A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12"/>
+			<taxon spec="Taxon" id="A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30"/>
+			<taxon spec="Taxon" id="A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12"/>
+			<taxon spec="Taxon" id="A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30"/>
+			<taxon spec="Taxon" id="A/duck/China/E53/2012|china|Anseriformes|2012-05-19"/>
+			<taxon spec="Taxon" id="A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13"/>
+			<taxon spec="Taxon" id="A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10"/>
+			<taxon spec="Taxon" id="A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19"/>
+			<taxon spec="Taxon" id="A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07"/>
+			<taxon spec="Taxon" id="A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01"/>
+			<taxon spec="Taxon" id="A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27"/>
+			<taxon spec="Taxon" id="A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11"/>
+			<taxon spec="Taxon" id="A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14"/>
+			<taxon spec="Taxon" id="A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06"/>
+			<taxon spec="Taxon" id="A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21"/>
+			<taxon spec="Taxon" id="A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21"/>
+			<taxon spec="Taxon" id="A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07"/>
+			<taxon spec="Taxon" id="A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26"/>
+			<taxon spec="Taxon" id="A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09"/>
+			<taxon spec="Taxon" id="A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01"/>
+			<taxon spec="Taxon" id="A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07"/>
+			<taxon spec="Taxon" id="A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14"/>
+			<taxon spec="Taxon" id="A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06"/>
+			<taxon spec="Taxon" id="A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30"/>
+			<taxon spec="Taxon" id="A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07"/>
+			<taxon spec="Taxon" id="A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14"/>
+			<taxon spec="Taxon" id="A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11"/>
+			<taxon spec="Taxon" id="A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09"/>
+			<taxon spec="Taxon" id="A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26"/>
+			<taxon spec="Taxon" id="A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20"/>
+			<taxon spec="Taxon" id="A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20"/>
+			<taxon spec="Taxon" id="A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20"/>
+			<taxon spec="Taxon" id="A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10"/>
+			<taxon spec="Taxon" id="A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01"/>
+			<taxon spec="Taxon" id="A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01"/>
+			<taxon spec="Taxon" id="A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27"/>
+			<taxon spec="Taxon" id="A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07"/>
+			<taxon spec="Taxon" id="A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02"/>
+			<taxon spec="Taxon" id="A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08"/>
+			<taxon spec="Taxon" id="A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01"/>
+			<taxon spec="Taxon" id="A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20"/>
+			<taxon spec="Taxon" id="A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17"/>
+			<taxon spec="Taxon" id="A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07"/>
+			<taxon spec="Taxon" id="A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29"/>
+			<taxon spec="Taxon" id="A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02"/>
+			<taxon spec="Taxon" id="A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17"/>
+        </taxa>
+      	
+				A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14=2008.19945355,
+				A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01=2014.91506849,
+				A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21=2013.13972603,
+				A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01=2009.66575342,
+				A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07=2014.93150685,
+				A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15=2014.45205479,
+				A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01=2014.00000000,
+				A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27=2014.15616438,
+				A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20=2008.88524590,
+				A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01=2009.41369863,
+				A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12=2010.03013699,
+				A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05=2012.25956284,
+				A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18=2014.20821918,
+				A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21=2014.72054795,
+				A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29=2014.99178082,
+				A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22=2015.21917808,
+				A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27=2016.40163934,
+				A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25=2016.89890710,
+				A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15=2011.53424658,
+				A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10=2010.52054795,
+				A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18=2012.79508197,
+				A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17=2010.12876712,
+				A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23=2015.22191781,
+				A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13=2013.61369863,
+				A/chicken/China/E93/2012|china|Galliformes|2012-07-10=2012.52185792,
+				A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04=2008.00819672,
+				A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04=2009.09315068,
+				A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20=2011.05205479,
+				A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02=2010.49863014,
+				A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11=2010.27397260,
+				A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26=2015.06849315,
+				A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15=2014.95342466,
+				A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20=2012.38251366,
+				A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24=2009.22465753,
+				A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08=2012.51639344,
+				A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25=2013.22739726,
+				A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09=2013.35068493,
+				A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06=2013.09863014,
+				A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29=2010.74246575,
+				A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08=2011.68493151,
+				A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03=2012.42076503,
+				A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22=2015.38630137,
+				A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01=2008.41530055,
+				A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30=2008.49453552,
+				A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06=2009.34246575,
+				A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17=2010.79178082,
+				A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15=2011.70410959,
+				A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30=2013.99452055,
+				A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06=2008.17759563,
+				A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23=2009.38904110,
+				A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03=2015.58630137,
+				A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01=2015.00000000,
+				A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17=2014.45753425,
+				A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18=2013.87945205,
+				A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10=2010.10958904,
+				A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12=2015.27671233,
+				A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25=2015.31232877,
+				A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05=2016.25956284,
+				A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06=2013.17534247,
+				A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21=2008.30327869,
+				A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03=2016.09016393,
+				A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22=2016.30601093,
+				A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11=2011.86027397,
+				A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28=2013.15890411,
+				A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21=2013.30136986,
+				A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27=2012.07103825,
+				A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11=2011.86027397,
+				A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16=2008.53825137,
+				A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24=2015.30958904,
+				A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30=2015.74520548,
+				A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09=2016.02185792,
+				A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04=2016.17213115,
+				A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02=2016.25136612,
+				A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15=2008.28688525,
+				A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10=2008.27322404,
+				A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01=2009.83287671,
+				A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06=2008.42896175,
+				A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14=2008.86885246,
+				A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29=2009.32328767,
+				A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15=2015.61917808,
+				A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07=2015.84931507,
+				A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07=2011.68219178,
+				A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21=2012.72131148,
+				A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17=2009.12876712,
+				A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25=2010.15068493,
+				A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01=2010.91506849,
+				A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28=2011.15890411,
+				A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04=2011.25479452,
+				A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13=2012.69945355,
+				A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14=2014.12054795,
+				A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17=2014.20547945,
+				A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11=2014.60821918,
+				A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20=2014.29863014,
+				A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29=2009.07671233,
+				A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25=2008.06557377,
+				A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04=2010.16986301,
+				A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24=2012.56010929,
+				A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20=2011.21369863,
+				A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28=2013.07397260,
+				A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27=2013.56712329,
+				A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19=2014.04931507,
+				A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20=2014.21369863,
+				A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22=2014.47123288,
+				A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17=2014.62465753,
+				A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16=2014.87397260,
+				A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29=2014.99178082,
+				A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22=2015.21917808,
+				A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10=2015.52054795,
+				A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12=2015.69589041,
+				A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23=2015.97534247,
+				A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29=2016.16120219,
+				A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28=2016.40437158,
+				A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21=2016.63661202,
+				A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27=2016.73770492,
+				A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25=2016.89890710,
+				A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20=2012.13661202,
+				A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06=2015.01369863,
+				A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02=2015.16438356,
+				A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01=2013.74794521,
+				A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12=2013.11506849,
+				A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30=2010.32602740,
+				A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12=2010.11506849,
+				A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30=2016.40983607,
+				A/duck/China/E53/2012|china|Anseriformes|2012-05-19=2012.37978142,
+				A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13=2015.27945205,
+				A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10=2015.10958904,
+				A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15=2009.03835616,
+				A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20=2008.13661202,
+				A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26=2008.73497268,
+				A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12=2009.03013699,
+				A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08=2011.18082192,
+				A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11=2011.02739726,
+				A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13=2010.27945205,
+				A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02=2010.49863014,
+				A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17=2009.20547945,
+				A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19=2008.96448087,
+				A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28=2011.40273973,
+				A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19=2012.04918033,
+				A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07=2012.76502732,
+				A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01=2010.16164384,
+				A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27=2015.56712329,
+				A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11=2011.18904110,
+				A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14=2010.78356164,
+				A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06=2015.17534247,
+				A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21=2009.13972603,
+				A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21=2016.13934426,
+				A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07=2013.93150685,
+				A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26=2008.90163934,
+				A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09=2011.85479452,
+				A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01=2011.08493151,
+				A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07=2013.17808219,
+				A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14=2013.19726027,
+				A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06=2008.26229508,
+				A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30=2016.24316940,
+				A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07=2011.84931507,
+				A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14=2015.03561644,
+				A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11=2016.02732240,
+				A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27=2014.31780822,
+				A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15=2015.61917808,
+				A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15=2016.62021858,
+				A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07=2011.68219178,
+				A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20=2012.13661202,
+				A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31=2012.57923497,
+				A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13=2013.52876712,
+				A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14=2010.53150685,
+				A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04=2010.75616438,
+				A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29=2010.23835616,
+				A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01=2010.91506849,
+				A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03=2011.16712329,
+				A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10=2012.52185792,
+				A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10=2014.18630137,
+				A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23=2014.55616438,
+				A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06=2014.17534247,
+				A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26=2011.90136986,
+				A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04=2012.92349727,
+				A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18=2012.29508197,
+				A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11=2012.60928962,
+				A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03=2012.09016393,
+				A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26=2013.15342466,
+				A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18=2009.13150685,
+				A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02=2008.16666667,
+				A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09=2009.02191781,
+				A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26=2009.81643836,
+				A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20=2014.96712329,
+				A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20=2015.29863014,
+				A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20=2013.71780822,
+				A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10=2010.10958904,
+				A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01=2013.00000000,
+				A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01=2008.24863388,
+				A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27=2014.56712329,
+				A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07=2010.93150685,
+				A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02=2015.41643836,
+				A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08=2011.34794521,
+				A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01=2013.74794521,
+				A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20=2013.29863014,
+				A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17=2008.87704918,
+				A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07=2012.76502732,
+				A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29=2015.07671233,
+				A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02=2011.16438356,
+				A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17=2011.53972603
+    </trait>
+
+	<typeTrait spec="TraitSet" traitname="type" id="typeTrait">
+			A/Chicken/Turkey-Edirne/09rs2843-5/2008|west_asia|Galliformes|2008-03-14=Galliformes,
+			A/Duck/Dubai/2459/2014|west_asia|Anseriformes|2014-12-01=Anseriformes,
+			A/Duck/Egypt/NLQP27SG-AR750/2013|africa|Anseriformes|2013-02-21=Anseriformes,
+			A/Duck/Shandong/Y01/2009|china|Anseriformes|2009-09-01=Anseriformes,
+			A/Quail/Dubai/AR3445-25043/2014|west_asia|Galliformes|2014-12-07=Galliformes,
+			A/Quail/Egypt/BSU5514-AR2219/2014|africa|Galliformes|2014-06-15=Galliformes,
+			A/chicken/AnNing/1/2014|china|Galliformes|2014-01-01=Galliformes,
+			A/chicken/Anhui/QD1/2014|china|Galliformes|2014-02-27=Galliformes,
+			A/chicken/Assam/140203/2008|south_asia|Galliformes|2008-11-20=Galliformes,
+			A/chicken/Bali/U8661/2009|southeast_asia|Galliformes|2009-06-01=Galliformes,
+			A/chicken/Bangladesh/0411/2010|south_asia|Galliformes|2010-01-12=Galliformes,
+			A/chicken/Bangladesh/12VIR-7140-15/2012|south_asia|Galliformes|2012-04-05=Galliformes,
+			A/chicken/Bangladesh/22159/2014|south_asia|Galliformes|2014-03-18=Galliformes,
+			A/chicken/Bangladesh/23414/2014|south_asia|Galliformes|2014-09-21=Galliformes,
+			A/chicken/Bangladesh/23974/2014|south_asia|Galliformes|2014-12-29=Galliformes,
+			A/chicken/Bangladesh/24944/2015|south_asia|Galliformes|2015-03-22=Galliformes,
+			A/chicken/Bangladesh/30065/2016|south_asia|Galliformes|2016-05-27=Galliformes,
+			A/chicken/Bangladesh/31269/2016|south_asia|Galliformes|2016-11-25=Galliformes,
+			A/chicken/Bangladesh/4070T/2011|south_asia|Galliformes|2011-07-15=Galliformes,
+			A/chicken/Bangladesh/9636/2010|south_asia|Galliformes|2010-07-10=Galliformes,
+			A/chicken/Bhutan/10CL1216/2012|south_asia|Galliformes|2012-10-18=Galliformes,
+			A/chicken/Bhutan/248006/2010|south_asia|Galliformes|2010-02-17=Galliformes,
+			A/chicken/BurkinaFaso/15VIR1774_36/2015|africa|Galliformes|2015-03-23=Galliformes,
+			A/chicken/Cambodia/X0815301/2013|southeast_asia|Galliformes|2013-08-13=Galliformes,
+			A/chicken/China/E93/2012|china|Galliformes|2012-07-10=Galliformes,
+			A/chicken/Egypt/0813-NLQP/2008|africa|Galliformes|2008-01-04=Galliformes,
+			A/chicken/Egypt/0962S-NLQP/2009|africa|Galliformes|2009-02-04=Galliformes,
+			A/chicken/Egypt/112AF/2011|africa|Galliformes|2011-01-20=Galliformes,
+			A/chicken/Egypt/3982-20/2010|africa|Galliformes|2010-07-02=Galliformes,
+			A/chicken/Egypt/3982-5/2010|africa|Galliformes|2010-04-11=Galliformes,
+			A/chicken/Egypt/A10540A/2015|africa|Galliformes|2015-01-26=Galliformes,
+			A/chicken/Egypt/AR233-S283NLQP/2014|africa|Galliformes|2014-12-15=Galliformes,
+			A/chicken/Egypt/BSU-BS-F27/2012|africa|Galliformes|2012-05-20=Galliformes,
+			A/chicken/Egypt/BSU-BS-R10/2009|africa|Galliformes|2009-03-24=Galliformes,
+			A/chicken/Egypt/BSU-BS-R24/2012|africa|Galliformes|2012-07-08=Galliformes,
+			A/chicken/Egypt/NLQP139V-AR753/2013|africa|Galliformes|2013-03-25=Galliformes,
+			A/chicken/Egypt/NLQP20SL-AR751/2013|africa|Galliformes|2013-05-09=Galliformes,
+			A/chicken/Egypt/NLQP33SD-AR748/2013|africa|Galliformes|2013-02-06=Galliformes,
+			A/chicken/Egypt/Q2247A/2010|africa|Galliformes|2010-09-29=Galliformes,
+			A/chicken/Egypt/S3802B/2011|africa|Galliformes|2011-09-08=Galliformes,
+			A/chicken/Gansu/5/2012|china|Galliformes|2012-06-03=Galliformes,
+			A/chicken/Ghana/29/2015|africa|Galliformes|2015-05-22=Galliformes,
+			A/chicken/Giza/CAI15/2008|africa|Galliformes|2008-06-01=Galliformes,
+			A/chicken/Giza/CAI22/2008|africa|Galliformes|2008-06-30=Galliformes,
+			A/chicken/Guangxi/S2039/2009|china|Galliformes|2009-05-06=Galliformes,
+			A/chicken/Hubei/RA18/2010|china|Galliformes|2010-10-17=Galliformes,
+			A/chicken/India/09CA09/2011|south_asia|Galliformes|2011-09-15=Galliformes,
+			A/chicken/India/12CL2168/2013|south_asia|Galliformes|2013-12-30=Galliformes,
+			A/chicken/India/96880/2008|south_asia|Galliformes|2008-03-06=Galliformes,
+			A/chicken/India/WB-NIV96526/2009|south_asia|Galliformes|2009-05-23=Galliformes,
+			A/chicken/Japan/AQ-HE79/2015|japan_korea|Galliformes|2015-08-03=Galliformes,
+			A/chicken/Japan/AnimalQuarantine-HE79/2015|japan_korea|Galliformes|2015-01-01=Galliformes,
+			A/chicken/Jiangsu/2477/2014|china|Galliformes|2014-06-17=Galliformes,
+			A/chicken/Jiangsu/927/2013|china|Galliformes|2013-11-18=Galliformes,
+			A/chicken/Jiangsu/k0402/2010|china|Galliformes|2010-02-10=Galliformes,
+			A/chicken/Jilin/0412MHK001-O/2015|china|Galliformes|2015-04-12=Galliformes,
+			A/chicken/Jilin/0425MHK009/2015|china|Galliformes|2015-04-25=Galliformes,
+			A/chicken/Kediri/04160512/2016|southeast_asia|Galliformes|2016-04-05=Galliformes,
+			A/chicken/Khanhhoa/CVVI-18/2013|southeast_asia|Galliformes|2013-03-06=Galliformes,
+			A/chicken/Korea/ISQ250/2008|japan_korea|Galliformes|2008-04-21=Galliformes,
+			A/chicken/LampungUtara/03160217/2016|southeast_asia|Galliformes|2016-02-03=Galliformes,
+			A/chicken/Lebanon/16VIR2783-20/2016|west_asia|Galliformes|2016-04-22=Galliformes,
+			A/chicken/Liaoning/S4092/2011|china|Galliformes|2011-11-11=Galliformes,
+			A/chicken/Nepal/PT-30/2013|south_asia|Galliformes|2013-02-28=Galliformes,
+			A/chicken/Nepal/T-274/2013|south_asia|Galliformes|2013-04-21=Galliformes,
+			A/chicken/Nepal/T1P/2012|south_asia|Galliformes|2012-01-27=Galliformes,
+			A/chicken/Nepal/T9-BH/2011|south_asia|Galliformes|2011-11-11=Galliformes,
+			A/chicken/Nigeria/08VIR4337-343/2008|africa|Galliformes|2008-07-16=Galliformes,
+			A/chicken/Nigeria/16VIR5840-58/2015|africa|Galliformes|2015-04-24=Galliformes,
+			A/chicken/Nigeria/16VIR5840-70/2015|africa|Galliformes|2015-09-30=Galliformes,
+			A/chicken/Nigeria/16VIR5840-80/2016|africa|Galliformes|2016-01-09=Galliformes,
+			A/chicken/Nigeria/16VIR5840-92/2016|africa|Galliformes|2016-03-04=Galliformes,
+			A/chicken/Nigeria/16VIR5840-99/2016|africa|Galliformes|2016-04-02=Galliformes,
+			A/chicken/Pakistan-Khi/NARC-612/2008|west_asia|Galliformes|2008-04-15=Galliformes,
+			A/chicken/Primorje/1/2008|europe|Galliformes|2008-04-10=Galliformes,
+			A/chicken/Sharqia/CAI27/2009|africa|Galliformes|2009-11-01=Galliformes,
+			A/chicken/Sheny/0606/2008|china|Galliformes|2008-06-06=Galliformes,
+			A/chicken/Thailand/CU-354/2008|southeast_asia|Galliformes|2008-11-14=Galliformes,
+			A/chicken/Vietnam/27262/2009|southeast_asia|Galliformes|2009-04-29=Galliformes,
+			A/chicken/Vietnam/HU3_1518/2015|southeast_asia|Galliformes|2015-08-15=Galliformes,
+			A/chicken/Vietnam/HU4-1316/2015|southeast_asia|Galliformes|2015-11-07=Galliformes,
+			A/chicken/Vietnam/NCVD-1040/2011|southeast_asia|Galliformes|2011-09-07=Galliformes,
+			A/chicken/Vietnam/NCVD-1963/2012|southeast_asia|Galliformes|2012-09-21=Galliformes,
+			A/chicken/Vietnam/NCVD-424/2009|southeast_asia|Galliformes|2009-02-17=Galliformes,
+			A/chicken/Vietnam/NCVD-428/2010|southeast_asia|Galliformes|2010-02-25=Galliformes,
+			A/chicken/Vietnam/NCVD-668/2010|southeast_asia|Galliformes|2010-12-01=Galliformes,
+			A/chicken/Vietnam/NCVD-715/2011|southeast_asia|Galliformes|2011-02-28=Galliformes,
+			A/chicken/Vietnam/NCVD-752/2011|southeast_asia|Galliformes|2011-04-04=Galliformes,
+			A/chicken/Vietnam/NCVD-KA365/2012|southeast_asia|Galliformes|2012-09-13=Galliformes,
+			A/chicken/Vietnam/NCVD14-A458/2014|southeast_asia|Galliformes|2014-02-14=Galliformes,
+			A/chicken/Vietnam/NCVD14-A498/2014|southeast_asia|Galliformes|2014-03-17=Galliformes,
+			A/chicken/Vietnam/NCVD14-A501/2014|southeast_asia|Galliformes|2014-08-11=Galliformes,
+			A/chicken/Vietnam/NCVD14_A380/2014|southeast_asia|Galliformes|2014-04-20=Galliformes,
+			A/chicken/WestBengal/155508/2009|south_asia|Galliformes|2009-01-29=Galliformes,
+			A/chicken/WestBengal/82613/2008|south_asia|Galliformes|2008-01-25=Galliformes,
+			A/chicken/Yinmarbin/A295/2010|southeast_asia|Galliformes|2010-03-04=Galliformes,
+			A/duck/Bangladesh/17753/2012|south_asia|Anseriformes|2012-07-24=Anseriformes,
+			A/duck/Bangladesh/1849/2011|south_asia|Anseriformes|2011-03-20=Anseriformes,
+			A/duck/Bangladesh/18949/2013|south_asia|Anseriformes|2013-01-28=Anseriformes,
+			A/duck/Bangladesh/20399/2013|south_asia|Anseriformes|2013-07-27=Anseriformes,
+			A/duck/Bangladesh/21814/2014|south_asia|Anseriformes|2014-01-19=Anseriformes,
+			A/duck/Bangladesh/22229/2014|south_asia|Anseriformes|2014-03-20=Anseriformes,
+			A/duck/Bangladesh/22811/2014|south_asia|Anseriformes|2014-06-22=Anseriformes,
+			A/duck/Bangladesh/23163/2014|south_asia|Anseriformes|2014-08-17=Anseriformes,
+			A/duck/Bangladesh/23858/2014|south_asia|Anseriformes|2014-11-16=Anseriformes,
+			A/duck/Bangladesh/24044/2014|south_asia|Anseriformes|2014-12-29=Anseriformes,
+			A/duck/Bangladesh/24958/2015|south_asia|Anseriformes|2015-03-22=Anseriformes,
+			A/duck/Bangladesh/25890/2015|south_asia|Anseriformes|2015-07-10=Anseriformes,
+			A/duck/Bangladesh/26182/2015|south_asia|Anseriformes|2015-09-12=Anseriformes,
+			A/duck/Bangladesh/27892/2015|south_asia|Anseriformes|2015-12-23=Anseriformes,
+			A/duck/Bangladesh/28389/2016|south_asia|Anseriformes|2016-02-29=Anseriformes,
+			A/duck/Bangladesh/30160/2016|south_asia|Anseriformes|2016-05-28=Anseriformes,
+			A/duck/Bangladesh/30682/2016|south_asia|Anseriformes|2016-08-21=Anseriformes,
+			A/duck/Bangladesh/30815/2016|south_asia|Anseriformes|2016-09-27=Anseriformes,
+			A/duck/Bangladesh/31299/2016|south_asia|Anseriformes|2016-11-25=Anseriformes,
+			A/duck/Bangladesh/32077/2012|south_asia|Anseriformes|2012-02-20=Anseriformes,
+			A/duck/CaMau/0237/2015|southeast_asia|Anseriformes|2015-01-06=Anseriformes,
+			A/duck/Cairo/1578CA/2015|africa|Anseriformes|2015-03-02=Anseriformes,
+			A/duck/Cambodia/1281W40M3/2013|southeast_asia|Anseriformes|2013-10-01=Anseriformes,
+			A/duck/Cambodia/261W7M2/2013|southeast_asia|Anseriformes|2013-02-12=Anseriformes,
+			A/duck/Cambodia/PV027D1/2010|southeast_asia|Anseriformes|2010-04-30=Anseriformes,
+			A/duck/Cambodia/TK05D12T/2010|southeast_asia|Anseriformes|2010-02-12=Anseriformes,
+			A/duck/Cameroon/16VIR3791-21/2016|africa|Anseriformes|2016-05-30=Anseriformes,
+			A/duck/China/E53/2012|china|Anseriformes|2012-05-19=Anseriformes,
+			A/duck/CoteDIvoire/15VIR2742_2/2015|africa|Anseriformes|2015-04-13=Anseriformes,
+			A/duck/Dakahlia/1536CAG/2015|africa|Anseriformes|2015-02-10=Anseriformes,
+			A/duck/EasternChina/909/2009|china|Anseriformes|2009-01-15=Anseriformes,
+			A/duck/Egypt/0871/2008|africa|Anseriformes|2008-02-20=Anseriformes,
+			A/duck/Egypt/0891-NLQP/2008|africa|Anseriformes|2008-09-26=Anseriformes,
+			A/duck/Egypt/093-NLQP/2009|africa|Anseriformes|2009-01-12=Anseriformes,
+			A/duck/Egypt/11106SF/2011|africa|Anseriformes|2011-03-08=Anseriformes,
+			A/duck/Egypt/1113SD/2011|africa|Anseriformes|2011-01-11=Anseriformes,
+			A/duck/Egypt/3982-12/2010|africa|Anseriformes|2010-04-13=Anseriformes,
+			A/duck/Egypt/3982-21/2010|africa|Anseriformes|2010-07-02=Anseriformes,
+			A/duck/Egypt/BSU-BS-R9/2009|africa|Anseriformes|2009-03-17=Anseriformes,
+			A/duck/Egypt/N05804-CLEVB359/2008|africa|Anseriformes|2008-12-19=Anseriformes,
+			A/duck/Egypt/N05827-CLEVB729/2011|africa|Anseriformes|2011-05-28=Anseriformes,
+			A/duck/Egypt/Q4596C/2012|africa|Anseriformes|2012-01-19=Anseriformes,
+			A/duck/Egypt/S6419C/2012|africa|Anseriformes|2012-10-07=Anseriformes,
+			A/duck/ElFayoum/CAI1/2010|africa|Anseriformes|2010-03-01=Anseriformes,
+			A/duck/Ghana/15VIR5480-24/2015|africa|Anseriformes|2015-07-27=Anseriformes,
+			A/duck/Hokkaido/28/2011|japan_korea|Anseriformes|2011-03-11=Anseriformes,
+			A/duck/Hokkaido/WZ83/2010|japan_korea|Anseriformes|2010-10-14=Anseriformes,
+			A/duck/Hubei/0306WHWTZ0122-P/2015_Mixed|china|Anseriformes|2015-03-06=Anseriformes,
+			A/duck/Hubei/46/2009|china|Anseriformes|2009-02-21=Anseriformes,
+			A/duck/Hubei/ZYSYF25/2016|china|Anseriformes|2016-02-21=Anseriformes,
+			A/duck/Hunan/1207YYGK007-P/2013|china|Anseriformes|2013-12-07=Anseriformes,
+			A/duck/Hunan/S4020/2008|china|Anseriformes|2008-11-26=Anseriformes,
+			A/duck/Hunan/S4030/2011|china|Anseriformes|2011-11-09=Anseriformes,
+			A/duck/India/02CA10/2011|south_asia|Anseriformes|2011-02-01=Anseriformes,
+			A/duck/Khanhhoa/CVVI-19/2013|southeast_asia|Anseriformes|2013-03-07=Anseriformes,
+			A/duck/Khanhhoa/CVVI-20/2013|southeast_asia|Anseriformes|2013-03-14=Anseriformes,
+			A/duck/Korea/JEQ149/2008|japan_korea|Anseriformes|2008-04-06=Anseriformes,
+			A/duck/Lamongan/04160434/2016|southeast_asia|Anseriformes|2016-03-30=Anseriformes,
+			A/duck/Nepal/5TZoo/2011|south_asia|Anseriformes|2011-11-07=Anseriformes,
+			A/duck/Nigeria/16VIR5840-2/2015|africa|Anseriformes|2015-01-14=Anseriformes,
+			A/duck/Nigeria/16VIR5840-83/2016|africa|Anseriformes|2016-01-11=Anseriformes,
+			A/duck/Sichuan/NCXN10/2014|china|Anseriformes|2014-04-27=Anseriformes,
+			A/duck/Vietnam/HU3_708/2015|southeast_asia|Anseriformes|2015-08-15=Anseriformes,
+			A/duck/Vietnam/HU5_1572/2016|southeast_asia|Anseriformes|2016-08-15=Anseriformes,
+			A/duck/Vietnam/NCVD-1048/2011|southeast_asia|Anseriformes|2011-09-07=Anseriformes,
+			A/duck/Vietnam/NCVD-1276/2012|southeast_asia|Anseriformes|2012-02-20=Anseriformes,
+			A/duck/Vietnam/NCVD-1602/2012|southeast_asia|Anseriformes|2012-07-31=Anseriformes,
+			A/duck/Vietnam/NCVD-3804/2013|southeast_asia|Anseriformes|2013-07-13=Anseriformes,
+			A/duck/Vietnam/NCVD-432/2010|southeast_asia|Anseriformes|2010-07-14=Anseriformes,
+			A/duck/Vietnam/NCVD-449/2010|southeast_asia|Anseriformes|2010-10-04=Anseriformes,
+			A/duck/Vietnam/NCVD-471/2010|southeast_asia|Anseriformes|2010-03-29=Anseriformes,
+			A/duck/Vietnam/NCVD-664/2010|southeast_asia|Anseriformes|2010-12-01=Anseriformes,
+			A/duck/Vietnam/NCVD-825/2011|southeast_asia|Anseriformes|2011-03-03=Anseriformes,
+			A/duck/Vietnam/NCVD-KA262/2012|southeast_asia|Anseriformes|2012-07-10=Anseriformes,
+			A/duck/Vietnam/NCVD14-A494/2014|southeast_asia|Anseriformes|2014-03-10=Anseriformes,
+			A/duck/Vietnam/NCVD14_A389/2014|southeast_asia|Anseriformes|2014-07-23=Anseriformes,
+			A/duck/Vietnam/NCVD14_A490/2014|southeast_asia|Anseriformes|2014-03-06=Anseriformes,
+			A/duck/Vietnam/NCVD3-31/2011|southeast_asia|Anseriformes|2011-11-26=Anseriformes,
+			A/duck/Vietnam/NCVD_0021/2012|southeast_asia|Anseriformes|2012-12-04=Anseriformes,
+			A/duck/Vietnam/OIE-1287/2012|southeast_asia|Anseriformes|2012-04-18=Anseriformes,
+			A/duck/Vietnam/OIE-2212/2012|southeast_asia|Anseriformes|2012-08-11=Anseriformes,
+			A/duck/Vietnam/QT1484/2012|southeast_asia|Anseriformes|2012-02-03=Anseriformes,
+			A/duck/Vietnam/R2-02-623-2/2013|southeast_asia|Anseriformes|2013-02-26=Anseriformes,
+			A/duck/Vietnam/ST0970/2009|southeast_asia|Anseriformes|2009-02-18=Anseriformes,
+			A/duck/Vietnam/TMU005/2008|southeast_asia|Anseriformes|2008-03-02=Anseriformes,
+			A/duck/Vietnam/TMU017/2009|southeast_asia|Anseriformes|2009-01-09=Anseriformes,
+			A/duck/Vietnam/TMU021/2009|southeast_asia|Anseriformes|2009-10-26=Anseriformes,
+			A/duck/Zhejiang/1220092/2014|china|Anseriformes|2014-12-20=Anseriformes,
+			A/goose/Bangladesh/25169/2015|south_asia|Anseriformes|2015-04-20=Anseriformes,
+			A/goose/Guangdong/SH7/2013|china|Anseriformes|2013-09-20=Anseriformes,
+			A/goose/Jiangsu/k0403/2010|china|Anseriformes|2010-02-10=Anseriformes,
+			A/goose/Shandong/GS/2013|china|Anseriformes|2013-01-01=Anseriformes,
+			A/goose/Tripura/103596/2008|south_asia|Anseriformes|2008-04-01=Anseriformes,
+			A/goose/Zhejiang/727098/2014|china|Anseriformes|2014-07-27=Anseriformes,
+			A/mallard/Korea/1195/2010|japan_korea|Anseriformes|2010-12-07=Anseriformes,
+			A/peacock/Yunnan/3/2015|china|Galliformes|2015-06-02=Galliformes,
+			A/quail/Egypt/1171SG/2011|africa|Galliformes|2011-05-08=Galliformes,
+			A/quail/Nanchang/6631/2013|china|Galliformes|2013-10-01=Galliformes,
+			A/quail/Vietnam/NCVD-3788/2013|southeast_asia|Galliformes|2013-04-20=Galliformes,
+			A/swan/Germany/R65/2008|europe|Anseriformes|2008-11-17=Anseriformes,
+			A/turkey/Egypt/S6405A/2012|africa|Galliformes|2012-10-07=Galliformes,
+			A/turkey/Israel/188/2015|west_asia|Galliformes|2015-01-29=Galliformes,
+			A/turkey/Jenin/341/2011|west_asia|Galliformes|2011-03-02=Galliformes,
+			A/waterfowl/Bangladesh/31935/2011|south_asia|Anseriformes|2011-07-17=Anseriformes
+		<taxa idref="taxonSet"/>
+	</typeTrait>
+
+		<run id="mcmc" spec="beast.coupledMCMC.CoupledMCMC" chainLength="150000000" storeEvery="1000" deltaTemperature="0.0100" chains="2" resampleEvery="1000" preBurnin="100000">
+
+        <init spec="SegmentTreeInitializer" network="@network">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </init>
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="likelihood" spec="CompoundDistribution">
+							<distribution id="treeLikelihood.ha_1" spec="ThreadedTreeLikelihood" tree="@ha.tree" useAmbiguities="true">
+								<data id="ha_1" spec="FilteredAlignment" filter="1::3,2::3">
+									<data idref="ha"/>
+								</data>
+								<siteModel id="SiteModel.s:ha_1" spec="SiteModel"  gammaCategoryCount="4" shape="@gammaShape.s:ha_1" mutationRate="@mutationRate.s:ha_1">
+									<substModel id="hky.s:ha_1" spec="HKY" kappa="@kappa.s:ha_1">
+										<frequencies id="estimatedFreqs.s:ha_1" spec="Frequencies" frequencies="@freqParameter.s:ha_1"/>
+									</substModel>
+								</siteModel>
+								<branchRateModel id="StrictClock.ha_1" spec="beast.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c"/>
+							</distribution>
+							<distribution id="treeLikelihood.ha_3" spec="ThreadedTreeLikelihood" tree="@ha.tree" useAmbiguities="true">
+								<data id="ha_3" spec="FilteredAlignment" filter="3::3">
+									<data idref="ha"/>
+								</data>
+								<siteModel id="SiteModel.s:ha_3" spec="SiteModel"  gammaCategoryCount="4" shape="@gammaShape.s:ha_3" mutationRate="@mutationRate.s:ha_3">
+									<substModel id="hky.s:ha_3" spec="HKY" kappa="@kappa.s:ha_3">
+										<frequencies id="estimatedFreqs.s:ha_3" spec="Frequencies" frequencies="@freqParameter.s:ha_3"/>
+									</substModel>
+								</siteModel>
+								<branchRateModel id="StrictClock.ha_3" spec="beast.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c"/>
+							</distribution>
+							<distribution id="treeLikelihood.na_1" spec="ThreadedTreeLikelihood" tree="@na.tree" useAmbiguities="true">
+								<data id="na_1" spec="FilteredAlignment" filter="1::3,2::3">
+									<data idref="na"/>
+								</data>
+								<siteModel id="SiteModel.s:na_1" spec="SiteModel"  gammaCategoryCount="4" shape="@gammaShape.s:na_1" mutationRate="@mutationRate.s:na_1">
+									<substModel id="hky.s:na_1" spec="HKY" kappa="@kappa.s:na_1">
+										<frequencies id="estimatedFreqs.s:na_1" spec="Frequencies" frequencies="@freqParameter.s:na_1"/>
+									</substModel>
+								</siteModel>
+								<branchRateModel id="StrictClock.na_1" spec="beast.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c"/>
+							</distribution>
+							<distribution id="treeLikelihood.na_3" spec="ThreadedTreeLikelihood" tree="@na.tree" useAmbiguities="true">
+								<data id="na_3" spec="FilteredAlignment" filter="3::3">
+									<data idref="na"/>
+								</data>
+								<siteModel id="SiteModel.s:na_3" spec="SiteModel"  gammaCategoryCount="4" shape="@gammaShape.s:na_3" mutationRate="@mutationRate.s:na_3">
+									<substModel id="hky.s:na_3" spec="HKY" kappa="@kappa.s:na_3">
+										<frequencies id="estimatedFreqs.s:na_3" spec="Frequencies" frequencies="@freqParameter.s:na_3"/>
+									</substModel>
+								</siteModel>
+								<branchRateModel id="StrictClock.na_3" spec="beast.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c"/>
+							</distribution>
+            </distribution>
+
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="networkPrior" spec="SCORE">
+                    <networkIntervals spec="StructuredNetworkIntervals" id="StructuredNetworkIntervals" network="@network"/>
+					<dynamics id="constantReassort" spec="ConstantReassortment" dimension="2">
+						<structuredCoalescentDynamics id="structuredCoalescentDynamics" spec="beast.mascot.dynamics.Constant" dimension="2" fromBeauti="false">
+							<Ne idref="popSize.t"/>
+							<backwardsMigration idref="migrationRate"/>
+        					<typeTrait idref="typeTrait"/>
+						</structuredCoalescentDynamics>
+						<typeTrait idref="typeTrait"/>
+						<reassortmentRates spec="RealParameter" idref="reassortmentRate"/>
+					</dynamics>
+                </distribution>
+                <prior id="ClockPrior.c" name="distribution" x="@clockRate.c">
+                  <OneOnX id="Uniform.0" name="distr"/>
+                </prior>
+
+								<prior id="KappaPrior.s:ha_1" name="distribution" x="@kappa.s:ha_1">
+									<LogNormal id="LogNormalDistributionModel.ha.1_1" name="distr" M="1.0" S="1.25"/>
+								</prior>
+								<prior id="KappaPrior.s:ha_3" name="distribution" x="@kappa.s:ha_3">
+									<LogNormal id="LogNormalDistributionModel.ha.1_3" name="distr" M="1.0" S="1.25"/>
+								</prior>
+								<prior id="GammaPrior.s:ha_1" name="distribution" x="@gammaShape.s:ha_1">
+									<Exponential id="ExponentialDistribution.ha_3" name="distr"/>
+								</prior>
+								<prior id="GammaPrior.s:ha_3" name="distribution" x="@gammaShape.s:ha_3">
+									<Exponential id="ExponentialDistribution.ha_30" name="distr"/>
+								</prior>
+								<prior id="KappaPrior.s:na_1" name="distribution" x="@kappa.s:na_1">
+									<LogNormal id="LogNormalDistributionModel.na.1_1" name="distr" M="1.0" S="1.25"/>
+								</prior>
+								<prior id="KappaPrior.s:na_3" name="distribution" x="@kappa.s:na_3">
+									<LogNormal id="LogNormalDistributionModel.na.1_3" name="distr" M="1.0" S="1.25"/>
+								</prior>
+								<prior id="GammaPrior.s:na_1" name="distribution" x="@gammaShape.s:na_1">
+									<Exponential id="ExponentialDistribution.na_3" name="distr"/>
+								</prior>
+								<prior id="GammaPrior.s:na_3" name="distribution" x="@gammaShape.s:na_3">
+									<Exponential id="ExponentialDistribution.na_30" name="distr"/>
+								</prior>
+
+                <prior id="PopSizePrior" name="distribution" x="@popSize.t">
+                  <LogNormal id="LogNormalDistributionModel.PopSize" meanInRealSpace="true" name="distr" M="2" S="0.5"/>
+                </prior>
+
+                <prior id="ReassortmentRatePrior" name="distribution" x="@reassortmentRate">
+                  <LogNormal id="LogNormalDistributionModel.reassortmentRate" meanInRealSpace="true" name="distr" M="0.1" S="1"/>
+                </prior>
+
+               	<prior id="MigrationRatePrior" name="distribution" x="@migrationRate">
+               		<Exponential id="ExponentialDistribution.migrationRate" name="distr" mean="0.2" />
+                	</prior>
+
+
+            </distribution>
+        </distribution>
+        
+                <state>
+						<stateNode id="ha.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+						<stateNode id="na.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+
+		<stateNode id="network" spec="SimulateStructureCoalescentNetwork" nSegments="2" ignoreMigrationNodes="true" enableSegmentTreeUpdate="false">
+
+                <traitSet idref="traitSet"/>
+		<typeTrait idref="typeTrait"/>
+
+				<parameter id="coalescentRate.init" name="coalescentRate">0.5</parameter>
+				<parameter id="reassortmentRate.init" name="reassortmentRate">0.1</parameter>
+                <parameter id="migrationRate.init" name="migrationRate">0.2</parameter>
+
+            </stateNode>
+            <stateNode spec="MappedNetwork" id="mappedNet" untypedNetwork="@network" dynamics="@constantReassort" rejection="true"/>
+
+			<parameter id="reassortmentRate" name="stateNode" dimension="2">0.1</parameter>
+            <parameter id="migrationRate" name="stateNode" dimension="2">0.2</parameter>
+            <parameter id="clockRate.c" name="stateNode">0.0036</parameter>
+            <parameter id="popSize.t" name="stateNode">2</parameter>
+						<parameter id="kappa.s:ha_1" lower="0.0" name="stateNode">0.302949</parameter>
+						<parameter id="kappa.s:ha_3" lower="0.0" name="stateNode">0.221962</parameter>
+						<parameter id="mutationRate.s:ha_1" name="stateNode">1</parameter>
+						<parameter id="mutationRate.s:ha_3" name="stateNode">1</parameter>
+						<parameter id="gammaShape.s:ha_1" name="stateNode">1.301122</parameter>
+						<parameter id="gammaShape.s:ha_3" name="stateNode">2.766696</parameter>
+						<parameter id="freqParameter.s:ha_1" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+						<parameter id="freqParameter.s:ha_3" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+						<parameter id="kappa.s:na_1" lower="0.0" name="stateNode">1.941562</parameter>
+						<parameter id="kappa.s:na_3" lower="0.0" name="stateNode">0.751195</parameter>
+						<parameter id="mutationRate.s:na_1" name="stateNode">1</parameter>
+						<parameter id="mutationRate.s:na_3" name="stateNode">1</parameter>
+						<parameter id="gammaShape.s:na_1" name="stateNode">1.395571</parameter>
+						<parameter id="gammaShape.s:na_3" name="stateNode">0.381611</parameter>
+						<parameter id="freqParameter.s:na_1" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+						<parameter id="freqParameter.s:na_3" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+        </state>
+
+        <operator id="ReassortmentRateScaler" spec="ScaleOperator" parameter="@reassortmentRate" scaleFactor="0.5" weight="3"/>
+	<operator id="MigrationRateScaler" spec="ScaleOperator" parameter="@migrationRate" scaleFactor="0.5"  weight="3"/>
+        <operator id="NeScaler" spec="ScaleOperator" parameter="@popSize.t" scaleFactor="0.5" weight="3"/>
+
+				<operator id="KappaScaler.s:ha_1" spec="ScaleOperator" parameter="@kappa.s:ha_1" scaleFactor="0.5" weight="0.1"/>
+				<operator id="KappaScaler.s:ha_3" spec="ScaleOperator" parameter="@kappa.s:ha_3" scaleFactor="0.5" weight="0.1"/>
+				<operator id="FrequenciesExchanger.s:ha_1" spec="DeltaExchangeOperator" delta="0.01" weight="0.1" parameter="@freqParameter.s:ha_1"/>
+				<operator id="FrequenciesExchanger.s:ha_3" spec="DeltaExchangeOperator" delta="0.01" weight="0.1" parameter="@freqParameter.s:ha_3"/>
+				<operator id="alpha_scaler_1.ha" spec="ScaleOperator" parameter="@gammaShape.s:ha_1" scaleFactor="0.75" weight="0.1"/>
+				<operator id="alpha_scaler_3.ha" spec="ScaleOperator" parameter="@gammaShape.s:ha_3" scaleFactor="0.75" weight="0.1"/>
+				<operator id="KappaScaler.s:na_1" spec="ScaleOperator" parameter="@kappa.s:na_1" scaleFactor="0.5" weight="0.1"/>
+				<operator id="KappaScaler.s:na_3" spec="ScaleOperator" parameter="@kappa.s:na_3" scaleFactor="0.5" weight="0.1"/>
+				<operator id="FrequenciesExchanger.s:na_1" spec="DeltaExchangeOperator" delta="0.01" weight="0.1" parameter="@freqParameter.s:na_1"/>
+				<operator id="FrequenciesExchanger.s:na_3" spec="DeltaExchangeOperator" delta="0.01" weight="0.1" parameter="@freqParameter.s:na_3"/>
+				<operator id="alpha_scaler_1.na" spec="ScaleOperator" parameter="@gammaShape.s:na_1" scaleFactor="0.75" weight="0.1"/>
+				<operator id="alpha_scaler_3.na" spec="ScaleOperator" parameter="@gammaShape.s:na_3" scaleFactor="0.75" weight="0.1"/>
+
+
+        <operator id="FixMeanMutationRatesOperator" spec="DeltaExchangeOperator" delta="0.75" weight="3.0">
+					<parameter idref="mutationRate.s:ha_1"/>
+					<parameter idref="mutationRate.s:ha_3"/>
+					<parameter idref="mutationRate.s:na_1"/>
+					<parameter idref="mutationRate.s:na_3"/>
+          <weightvector id="weightparameter" spec="parameter.IntegerParameter" dimension="4" estimate="false">
+1181 590 955 478           </weightvector>
+        </operator>
+
+        <operator id="upDownOperator" spec="NetworkScaleOperator" network="@network" weight="5.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+            <upParameter idref="popSize.t"/>
+            <downParameter idref="clockRate.c"/>
+            <downParameter idref="reassortmentRate"/>
+        </operator>
+
+        <operator id="upDownOperatorNeMigration" spec="NetworkScaleOperator" network="@network" weight="5.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+            <upParameter idref="popSize.t"/>
+            <downParameter idref="migrationRate"/>
+        </operator>
+
+        <operator id="clockRatescaler" spec="ScaleOperator" parameter="@clockRate.c" scaleFactor="0.75" weight="3"/>
+
+        <operator id="AddRemoveReassortment" spec="AddRemoveReassortment" network="@network" alpha="1.0" weight="100.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+      	<operator id="DivertSegmentOperator" spec="DivertSegmentOperator" network="@network" weight="5.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+      	<operator spec="UniformNetworkNodeHeightOperator" network="@network" weight="5.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+        <operator id="NetworkScale" spec="NetworkScaleOperator" network="@network" weight="3.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+        <operator id="NetworkScaleRootOnly" spec="NetworkScaleOperator" network="@network" scaleRootOnly="true" weight="3.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+      	<operator id="NetworkExchangeWide" spec="NetworkExchange" network="@network" isNarrow="false" weight="10.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+      	<operator id="NetworkExchangeNarrow" spec="NetworkExchange" network="@network" isNarrow="true" weight="10.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+      	<operator id="SubNetworkSlide" spec="SubNetworkSlide" network="@network" weight="30.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+        </operator>
+
+        <operator id="ResimulateAboveSegmentRoots" spec="ResimulateAboveSegmentRoots" network="@network" weight="3.0">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+          	<Ne idref="popSize.t"/>
+       		<reassortmentRates idref="reassortmentRate"/>
+	  		<networkIntervals idref="StructuredNetworkIntervals"/>
+        </operator>
+
+        <logger spec="Logger" logEvery="50000" mode="tree" fileName="$(filebase).typed.network.trees">
+            <log idref="mappedNet"/>
+        </logger>
+        
+        <logger spec="Logger" logEvery="50000" fileName="$(filebase).typed.stats.log">
+            <log spec="TypedNetworkStatsLogger" network="@mappedNet">
+            </log>
+        </logger> 
+
+        <logger logEvery="50000" mode="tree" fileName="$(filebase).network.trees">
+            <log idref="network"/>
+        </logger>
+
+			<logger spec="Logger" logEvery="50000" mode="tree" fileName="$(filebase).ha.trees">
+				<log idref="ha.tree"/>
+			</logger>
+			<logger spec="Logger" logEvery="50000" mode="tree" fileName="$(filebase).na.trees">
+				<log idref="na.tree"/>
+			</logger>
+        
+
+
+
+        <logger logEvery="50000" fileName="$(filebase).log">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="networkPrior"/>
+            <log idref="constantReassort"/>
+            <log idref="structuredCoalescentDynamics"/>
+			<log spec="RootStateLogger" score="@networkPrior" reassortmentDynamics="@constantReassort"/>
+            <log spec="NetworkStatsLogger" network="@network">
+					<segmentTree idref="ha.tree"/>
+					<segmentTree idref="na.tree"/>
+            </log>
+				<log spec="TreeStatLogger" tree="@ha.tree"/>
+				<log spec="TreeStatLogger" tree="@na.tree"/>
+            <log idref="clockRate.c"/>
+				<log idref="kappa.s:ha_1"/>
+				<log idref="kappa.s:ha_3"/>
+				<log idref="mutationRate.s:ha_1"/>
+				<log idref="mutationRate.s:ha_3"/>
+				<log idref="gammaShape.s:ha_1"/>
+				<log idref="gammaShape.s:ha_3"/>
+				<log idref="freqParameter.s:ha_1"/>
+				<log idref="freqParameter.s:ha_3"/>
+				<log idref="kappa.s:na_1"/>
+				<log idref="kappa.s:na_3"/>
+				<log idref="mutationRate.s:na_1"/>
+				<log idref="mutationRate.s:na_3"/>
+				<log idref="gammaShape.s:na_1"/>
+				<log idref="gammaShape.s:na_3"/>
+				<log idref="freqParameter.s:na_1"/>
+				<log idref="freqParameter.s:na_3"/>
+        </logger>
+
+        <logger id="screenlog" logEvery="5000000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+            <log spec="NetworkStatsLogger" network="@network"/>
+            <log spec="ESS" arg="@posterior"/>
+        </logger>
+
+    </run>
+</beast>

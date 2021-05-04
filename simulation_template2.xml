@@ -1,0 +1,94 @@
+<beast version="2.0"
+       namespace="beast.core
+                 :beast.core.util
+                 :beast.core.parameter
+                 :beast.evolution.alignment
+                 :beast.evolution.likelihood
+                 :beast.evolution.tree
+                 :beast.evolution.tree.coalescent
+                 :beast.evolution.sitemodel
+                 :beast.evolution.substitutionmodel
+                 :beast.evolution.operators
+                 :beast.math.distributions
+                 :feast.simulation
+                 :feast.fileio
+                 :feast
+                 :feast.expressions
+                 :feast.fileio.logfileiterator
+                 :coalre.network
+                 :coalre.statistics
+                 :coalre.simulator
+		 :score.simulator
+		 :score.logger">
+
+
+
+        <traitSet spec="TraitSet" traitname="date-backward" id="traitSet">
+            insert_taxa_and_dates
+        </traitSet>
+
+        <typeTrait spec="TraitSet" traitname="type" id="typeTrait">
+            <taxa idref="taxonSet"/>
+           insert_types
+        </typeTrait>
+    
+	<run spec="LogFileIterator">	
+		<logFileState spec="TraceLogFileState" logFileName="h5n1_combined.log">
+			<logFileEntry spec="LogFileRealParameter" fieldName="reassortmentRate.Anseriformes">
+				<fieldParameter id="reassortmentRate.Anseriformes" spec="RealParameter" value="0.0"/>
+			</logFileEntry>
+			
+			<logFileEntry spec="LogFileRealParameter" fieldName="reassortmentRate.Galliformes">
+				<fieldParameter id="reassortmentRate.Galliformes" spec="RealParameter" value="0.0"/>
+			</logFileEntry>
+			
+			<logFileEntry spec="LogFileRealParameter" fieldName="popSize.t.Anseriformes">	
+				<fieldParameter id="popSize.t.Anseriformes" spec="RealParameter" value="0.0"/>
+			</logFileEntry>
+			
+			<logFileEntry spec="LogFileRealParameter" fieldName="popSize.t.Galliformes">
+				<fieldParameter id="popSize.t.Galliformes" spec="RealParameter" value="0.0"/>
+			</logFileEntry>
+
+			
+			<logFileEntry spec="LogFileRealParameter" fieldName="b_migrationRate.Anseriformes_to_Galliformes">
+				<fieldParameter id="b_migrationRate.Anseriformes_to_Galliformes" spec="RealParameter" value="0.0"/>
+			</logFileEntry>
+			<logFileEntry spec="LogFileRealParameter" fieldName="b_migrationRate.Galliformes_to_Anseriformes">
+				<fieldParameter id="b_migrationRate.Galliformes_to_Anseriformes" spec="RealParameter" value="0.0"/>
+			</logFileEntry>
+				
+			
+    		</logFileState>	 
+		
+	<logger spec="Logger" logEvery="1" mode="tree" fileName="$(filebase).network.trees">
+		<log id="network" spec="SimulateNetworkGivenRates" nSegments="2" enableSegmentTreeUpdate="false" dimension="2">
+			<coalescentRate id="coalescentRate" spec="feast.function.Concatenate">
+	    			<arg id="coalescentRate.Anseriformes" spec='ExpCalculator'  value="1/popSize.t.Anseriformes">
+					<arg idref="popSize.t.Anseriformes"/>
+	             		</arg> 
+	            		<arg id="coalescentRate.Galliformes" spec='ExpCalculator'  value="1/popSize.t.Galliformes"> 
+					<arg idref="popSize.t.Galliformes"/> 
+	            		</arg> 
+			</coalescentRate> 
+			
+			<reassortmentRate id="reassortmentRate" spec="feast.function.Concatenate">
+    					<arg idref="reassortmentRate.Anseriformes"/>
+    					<arg idref="reassortmentRate.Galliformes"/>
+			</reassortmentRate>
+			
+			<migrationRate id="migrationRate" spec="feast.function.Concatenate">
+    					<arg idref="b_migrationRate.Anseriformes_to_Galliformes"/>
+    					<arg idref="b_migrationRate.Galliformes_to_Anseriformes"/>
+			</migrationRate>
+
+    	 		<traitSet spec="TraitSet" traitname="date-forward" idref="traitSet"/>	
+			<typeTrait spec="TraitSet" traitname="type" idref="typeTrait"/>
+
+        			<segmentTree id="ha.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+        			<segmentTree id="na.tree" spec="Tree" taxonset="@taxonSet" trait="@traitSet"/>
+    		</log>
+        </logger> 
+	 
+      </run>
+</beast>
