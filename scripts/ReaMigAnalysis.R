@@ -14,15 +14,17 @@ fits<- c(1, 2, 4,6)
 # directory <- "no_filter"
 this.dir <- "/Users/jugne/Documents/SCORE-paper/scripts"
 window_size <- c(0.5, 1.0, 1.5, 2.0,3.0,4.0,5.0)
-# window_size <- c(2.0,3.0)
-directories<-c("no_filter","root_filter_max", "segment_root_filter_max")
+# window_size <- c(2.0)
+# directories<-c("no_filter","root_filter_max", "segment_root_filter_max")
 # directories<-c("root_filter_max", "segment_root_filter_max")
-# directories<-c("no_filter")
+directories<-c("no_filter", "segment_root_filter_max")
 for (fit in fits){
   for(directory in directories){
 
 all_runs <- data.frame()
 summary_total<- data.frame()
+dat_fit_unfit_diff <- data.frame(value = double(), run = integer())
+diff_fit_unfit_window <- data.frame(value = double(), run = integer());
 for(run in seq(1,10)){
 
 # Set the directory to the directory of the file
@@ -44,6 +46,7 @@ if (directory=="no_filter"){
 
 dat_full <- data.frame(value = double(), position = character(), window_size = integer());
 dat_fit <- data.frame(value = double(), position = character(), window_size = integer());
+
 dat_unfit <- data.frame(value = double(), position = character(), window_size = integer());
 dat_prior <- data.frame(value = double(), window_size = character(), window_size = integer());
 # dat_mean_rates <- data.frame(value = double(), network_split = character(), window_size = integer());
@@ -58,6 +61,7 @@ diff_full <- data.frame(value = double(), window_size = integer(), method = char
 diff_fit <- data.frame(value = double(), window_size = integer(), method = character());
 diff_unfit <- data.frame(value = double(), window_size = integer(), method = character());
 
+
 dist_diff <- data.frame(value = double(), window_size = integer(), method = character());
 
 str<-""
@@ -65,15 +69,12 @@ summary_window <- data.frame()
 summary_<- data.frame(row.names = c("Total reassortment node count", "On window reassortment node count",  "Off window reassortment node count", "Network length"))
 
 for (i in window_size) {
-  analysis_file_inf <- paste0(directory,"/fit_",fit,"/run_",run,"/reaMigAnalysis_",format(i, nsmall = 1),"_",fit,".txt")
-  analysis_file_sim <- paste0(directory,"/fit_",fit,"/run_",run,"/reaMigAnalysis_post_rates_no_data_reject_",format(i, nsmall = 1),"_",fit,".txt")
+  analysis_file_inf <- paste0(directory,"/new/fit_",fit,"/run_",run,"/reaMigAnalysis_",format(i, nsmall = 1),"_",fit,"_new.txt")
+  analysis_file_sim <- paste0(directory,"/new/fit_",fit,"/run_",run,"/reaMigAnalysis_post_rates_no_data_reject_",format(i, nsmall = 1),"_",fit,"_new.txt")
   if (!file.exists(analysis_file_inf)){
-    analysis_file_inf <- paste0(directory,"/fit_",fit,"/run_",run,"/reaMigAnalysis_",i,"_",fit,".txt")
-    if (!file.exists(analysis_file_inf)){
-      system(paste0("mkdir -p ",directory,"/fit_",fit,"/run_",run))
-      system(paste0("java -jar ./ReaMigAnalysis2.jar -maxReaMigDistance ", i,
+      system(paste0("mkdir -p ",directory,"/new/fit_",fit,"/run_",run))
+      system(paste0("java -jar ./ReaMigAnalysis3.jar -maxReaMigDistance ", i,
                   " -burnin 0 -minTipDistance ", fit, " ", combined_trees_inf," ", analysis_file_inf))
-    }
   }
       
   data = read.table(analysis_file_inf, header=TRUE)
@@ -109,7 +110,9 @@ for (i in window_size) {
   dat_unfit<- rbind(dat_unfit,cbind(rbind(rea_unfit_window, rea_unfit_off_window), data.frame(window_size = i)))
   diff_unfit<- rbind(diff_unfit, data.frame(value = rea_unfit_window$value - rea_unfit_off_window$value, window_size = i, method = "SCoRe_unfit"))
   
-  
+  if (i == 2){
+    diff_fit_unfit_window <- rbind(diff_fit_unfit_window, data.frame(value=data$n_reassortment_window_fit/data$network_length_fit - data$n_reassortment_window_unfit/data$network_length_unfit, run=run))
+  }
   ### Prior ###
   
   # system(paste0("java -jar ./ReaMigAnalysis.jar -maxReaMigDistance ",
@@ -163,11 +166,8 @@ for (i in window_size) {
   ### Posterior Rates, No Data Simulation ### 
   
   if (!file.exists(analysis_file_sim)){
-    analysis_file_sim <- paste0(directory,"/fit_",fit,"/run_",run,"/reaMigAnalysis_post_rates_no_data_reject_",i,"_",fit,".txt")
-    if (!file.exists(analysis_file_sim)){
-      system(paste0("java -jar ./ReaMigAnalysis2.jar -maxReaMigDistance ", i,
+      system(paste0("java -jar ./ReaMigAnalysis3.jar -maxReaMigDistance ", i,
                   " -burnin 0 -minTipDistance ", fit, " ", combined_trees_sim," ", analysis_file_sim))
-    }
   }
   
   data_post_rates = read.table(analysis_file_sim, header=TRUE)
@@ -226,6 +226,10 @@ for (i in window_size) {
   
   summary_window <- rbind(summary_window ,cbind(Window=c(rep("On",3), rep("Off", 3)),summary_table_score, summary_table_sim))
 }
+
+### total fit-unfit diff
+
+dat_fit_unfit_diff <- rbind(dat_fit_unfit_diff, data.frame(value =   (data$n_reassortment_total_fit/data$network_length_fit) - (data$n_reassortment_total_unfit/data$network_length_unfit), run=run))
 
 
 dat_full$window_size <- as.factor(dat_full$window_size)
@@ -376,29 +380,34 @@ all_runs <- rbind(all_runs, window)
 }
 for (w in window_size){
   runs <- all_runs[which(all_runs$window_size==w),]
-  max_lim <- max(boxplot.stats(runs$value)$stats)*2
+  max_lim <- max(runs$value)
+  min_lim <- min(runs$value)
   runs$run <- factor(runs$run)
-
+  
   p_combined_diff<- ggplot(runs, aes(x = run, y = value, color=method)) +
-    # geom_violin() +
+    # geom_violin(draw_quantiles = c(0.25, 0.5, 0.75)) +
     geom_boxplot(outlier.shape = NA,  lwd=1, fatten=1) +
-    coord_cartesian(ylim = c(-max_lim, max_lim))+
+    coord_cartesian(ylim = c(-0.21, 0.21))+
     labs(title = paste0("Window size: ",w),
       x="Subset",
       y="Reassortment rate difference between \n on and off window, before migration event") +
     scale_colour_colorblind(labels = c("Posterior rates simulation", "SCoRe. Full network", "SCoRe. Fit network edges", "SCoRe. Unfit network edges")) +
     theme_minimal() + theme(legend.title = element_blank(), text = element_text(size=24), legend.background = element_rect(fill="white", linetype="blank"),
-                            legend.key.size = unit(3,"line"), legend.position="none", legend.direction = "horizontal") + scale_y_continuous(limits = c(-0.4, 0.4)) +guides(color=guide_legend(ncol=2))
+                            legend.key.size = unit(3,"line"), legend.position="none", legend.direction = "horizontal") +guides(color=guide_legend(ncol=2))
 
-  ggsave(plot=p_combined_diff, paste0(directory,"/fit_",fit,"/h5n1_combined_fit_",fit,"_window_",w,"_diff.pdf"), width=17)
+  ggsave(plot=p_combined_diff, paste0(directory,"/new/fit_",fit,"/h5n1_combined_fit_",fit,"_window_",w,"_diff.pdf"), width=17)
 }
 
 
-
-
-
-
-
+# dat_fit_unfit_diff$run<-as.factor(dat_fit_unfit_diff$run)
+# 
+# p<- ggplot(dat_fit_unfit_diff, aes(x=run, y=value))+
+#   geom_boxplot(outlier.shape = NA,  lwd=1, fatten=1, notch = T)
+# 
+# 
+# diff_fit_unfit_window$run<-as.factor(diff_fit_unfit_window$run)
+# pp<- ggplot(diff_fit_unfit_window, aes(x=run, y=value))+
+#   geom_boxplot(outlier.shape = NA,  lwd=1, fatten=1, notch = T)
 
 # score_full = wes_palette(n=4, name="Darjeeling1")[1]
 # score_fit = wes_palette(n=4, name="Darjeeling1")[2]
